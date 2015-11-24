@@ -19,7 +19,9 @@ div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus {
 ul, ol { list-style-type: none; }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+html { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -30,15 +32,61 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .icon-skrill:before { content: ""; }
 
+@font-face { font-family: GothamBold; src: url("fonts/GothamBold.eot"); src: url("fonts/GothamBold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamBold.woff2") format("woff2"), url("fonts/GothamBold.woff") format("woff"), url("fonts/GothamBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: AkzidenzGroteskBE-Md; src: url("fonts/AkzidenzGroteskBE-Md.eot"); src: url("fonts/AkzidenzGroteskBE-Md.eot?#iefix") format("embedded-opentype"), url("fonts/AkzidenzGroteskBE-Md.woff2") format("woff2"), url("fonts/AkzidenzGroteskBE-Md.woff") format("woff"), url("fonts/AkzidenzGroteskBE-Md.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: AkzidenzGroteskBE-Regular; src: url("fonts/AkzidenzGroteskBE-Regular.eot"); src: url("fonts/AkzidenzGroteskBE-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/AkzidenzGroteskBE-Regular.woff2") format("woff2"), url("fonts/AkzidenzGroteskBE-Regular.woff") format("woff"), url("fonts/AkzidenzGroteskBE-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "AkzidenzGroteskBE-Regular"; font-weight: normal; font-style: normal; font-size: 12px; line-height: 1.4; background-color: rgba(204, 204, 204, 0.4); background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(204, 204, 204, 0.4)), to(#fff)); background-image: -webkit-linear-gradient(rgba(204, 204, 204, 0.4), #fff); background-image: linear-gradient(rgba(204, 204, 204, 0.4), #fff); }
+
+.header { position: relative; height: 36px; padding: 5px 15px 5px 10px; background: #000; }
+
+.logo { float: left; font-family: "GothamBold", sans-serif; font-weight: normal; font-style: normal; font-size: 20px; text-transform: uppercase; color: #fff; text-decoration: none; }
+.logo:first-letter { color: #0082E9; }
+
+.sales { float: right; font-size: 0; padding-top: 2px; }
+.sales span, .sales a { display: inline-block; vertical-align: middle; font-family: "AkzidenzGroteskBE-Md"; font-weight: normal; font-style: normal; font-size: 15px; color: #FFCE00; text-decoration: none; }
+.sales span { text-transform: uppercase; margin-right: 5px; font-size: 15px; }
+
+.nav { float: right; padding-top: 2px; }
+
+.menu { font-size: 0; }
+.menu li { display: inline-block; vertical-align: middle; margin-left: 30px; }
+.menu li a { font-size: 15px; text-transform: uppercase; color: #fff; font-family: "AkzidenzGroteskBE-Md"; font-weight: normal; font-style: normal; text-decoration: none; -webkit-transition: color 200ms; transition: color 200ms; }
+.menu li a:hover { color: #FFCE00; }
+
+.enter { padding-top: 58px; }
+.enter .enter__in { max-width: 335px; text-align: center; margin: 0 auto; }
+
+.title { margin-bottom: 20px; font-size: 28px; color: #0082E9; }
+
+.info { margin-bottom: 35px; font-size: 15px; color: #666; }
+.info a { color: #0316FF; text-decoration: none; }
+.info a:hover { text-decoration: underline; }
+
+.form .form__row { display: block; margin-bottom: 10px; text-align: left; }
+.form .form__row p { color: #999; font-size: 14px; }
+.form .form__bottom { padding-top: 20px; }
+.form .form__footer { *zoom: 1; padding-top: 19px; }
+.form .form__footer:after { content: " "; display: table; clear: both; }
+.form .form__footer .checkbox { float: left; }
+
+.input { width: 100%; height: 40px; border: 1px solid #b2b2b2; background: #fff; padding: 0 5px; font-size: 15px; }
+
+.btn { width: 100%; height: 40px; vertical-align: middle; text-align: center; color: #fff; font-family: "AkzidenzGroteskBE-Md"; font-weight: normal; font-style: normal; font-size: 15px; background: #0082E9; }
+
+.checkbox { font-size: 0; }
+.checkbox input, .checkbox span { display: inline-block; vertical-align: baseline; }
+.checkbox input { margin-right: 5px; }
+.checkbox span { font-size: 13px; color: #000; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.forgor { float: right; color: #0316FF; text-decoration: none; font-size: 13px; }
+.forgor:hover { text-decoration: underline; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-@media only screen and (max-width: 1024px){
- div{ display: block; }
- p{ background: red; } }
 
 
 

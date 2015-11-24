@@ -1,57 +1,154 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)
-// =book
-// 	font-family: "book", Arial, sans-serif
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
-
+// fonts
++font(GothamBold, GothamBold)
+=gotham-b
+	font-family: 'GothamBold', sans-serif
+	font-weight: normal
+	font-style: normal
++font(AkzidenzGroteskBE-Md, AkzidenzGroteskBE-Md)
+=akziden-m
+	font-family: 'AkzidenzGroteskBE-Md'
+	font-weight: normal
+	font-style: normal	
++font(AkzidenzGroteskBE-Regular, AkzidenzGroteskBE-Regular)	
+=akziden
+	font-family: 'AkzidenzGroteskBE-Regular'
+	font-weight: normal
+	font-style: normal
 
 body
-	font-family: Arial, sans-serif
+	+akziden
 	font-size: 12px
 	line-height: 1.4
+	+g(rgba(#ccc, 0.4), #fff)
 
 
 // common blocks
+
+.header
+	position: relative
+	height: 36px
+	padding: 5px 15px 5px 10px
+	background: #000 
+.logo
+	float: left
+	+gotham-b
+	font-size: 20px
+	text-transform: uppercase
+	color: #fff
+	text-decoration: none
+	&:first-letter
+		color: #0082E9
+.sales
+	float: right
+	font-size: 0
+	padding-top: 2px 
+	span, a
+		display: inline-block
+		vertical-align: middle
+		+akziden-m
+		font-size: 15px
+		color: #FFCE00
+		text-decoration: none
+	span
+		text-transform: uppercase
+		margin-right: 5px
+		font-size: 15px
+.nav		 
+	float: right
+	padding-top: 2px
+.menu
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 30px
+		a
+			font-size: 15px
+			text-transform: uppercase
+			color: #fff
+			+akziden-m
+			text-decoration: none
+			transition: color 200ms
+			&:hover
+				color: #FFCE00
+.enter
+	padding-top: 58px
+	.enter__in
+		max-width: 335px
+		text-align: center
+		margin: 0 auto 				 
+.title
+	margin-bottom: 20px
+	font-size: 28px
+	color: #0082E9 
+.info
+	margin-bottom: 35px
+	font-size: 15px
+	color: #666
+	a	
+		color: #0316FF
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+.form
+	.form__row
+		display: block
+		margin-bottom: 10px
+		text-align: left
+		p
+			color: #999
+			font-size: 14px
+	.form__bottom
+		padding-top: 20px
+	.form__footer
+		+clr
+		padding-top: 19px
+		.checkbox
+			float: left				
+.input
+	width: 100%
+	height: 40px
+	border: 1px solid #b2b2b2
+	background: #fff
+	padding: 0 5px
+	font-size: 15px    		
+.btn
+	width: 100%
+	height: 40px
+	vertical-align: middle
+	text-align: center
+	color: #fff
+	+akziden-m
+	font-size: 15px
+	background: #0082E9    
+.checkbox
+	font-size: 0
+	input, span
+		display: inline-block
+		vertical-align: baseline
+	input
+		margin-right: 5px
+	span
+		font-size: 13px
+		color: #000
+		+nosel
+.forgor
+	float: right
+	color: #0316FF
+	text-decoration: none
+	font-size: 13px
+	&:hover
+		text-decoration: underline  	 	
+
+
+
+
+
+
+
+
+
+
+
+
