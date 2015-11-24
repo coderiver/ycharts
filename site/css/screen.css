@@ -1,8 +1,6 @@
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
-body, html { height: 100%; }
-
 img, fieldset, a img { border: none; }
 
 input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
@@ -62,24 +60,49 @@ body { font-family: "AkzidenzGroteskBE-Regular"; font-weight: normal; font-style
 .info a { color: #0316FF; text-decoration: none; }
 .info a:hover { text-decoration: underline; }
 
-.form .form__row { display: block; margin-bottom: 10px; text-align: left; }
+.form { margin-bottom: 20px; }
+.form .form__row { *zoom: 1; display: block; margin-bottom: 10px; text-align: left; }
+.form .form__row:after { content: " "; display: table; clear: both; }
 .form .form__row p { color: #999; font-size: 14px; }
+.form .form__row p small { color: #B3B3B3; font-size: 12px; }
 .form .form__bottom { padding-top: 20px; }
 .form .form__footer { *zoom: 1; padding-top: 19px; }
 .form .form__footer:after { content: " "; display: table; clear: both; }
 .form .form__footer .checkbox { float: left; }
+.form .form__col { float: left; width: 47.5%; margin-left: 5%; }
+.form .form__col:first-child { margin-left: 0; }
+.form.form_reg .form__footer { padding-top: 0; padding-bottom: 19px; }
 
 .input { width: 100%; height: 40px; border: 1px solid #b2b2b2; background: #fff; padding: 0 5px; font-size: 15px; }
 
 .btn { width: 100%; height: 40px; vertical-align: middle; text-align: center; color: #fff; font-family: "AkzidenzGroteskBE-Md"; font-weight: normal; font-style: normal; font-size: 15px; background: #0082E9; }
 
-.checkbox { font-size: 0; }
-.checkbox input, .checkbox span { display: inline-block; vertical-align: baseline; }
-.checkbox input { margin-right: 5px; }
+.checkbox { font-size: 0; text-align: left; }
+.checkbox input { float: left; margin-right: 5px; }
 .checkbox span { font-size: 13px; color: #000; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.checkbox span a { text-decoration: none; }
+.checkbox span a:hover { text-decoration: underline; }
 
 .forgor { float: right; color: #0316FF; text-decoration: none; font-size: 13px; }
 .forgor:hover { text-decoration: underline; }
+
+.select { position: relative; cursor: pointer; font-size: 12px; }
+.select select { position: absolute; opacity: 0; }
+
+.select__text { position: relative; height: 40px; line-height: 44px; color: #8f8e8e; border: 1px solid #b2b2b2; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: #fff; border-right: 1px solid #d0cfcf; padding: 0 16px; }
+.select__text:before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 40px; background: #F2F2F2; }
+.select__text:after { content: ""; position: absolute; right: 15px; top: 50%; margin-top: -3px; width: 0px; height: 0px; border-style: solid; border-width: 6px 5.5px 0 5.5px; border-color: #8f8e8e transparent transparent transparent; }
+
+.select__list { position: absolute; display: none; left: 0; right: 0; top: 100%; z-index: 100; padding: 10px 0; border-top: 0; max-height: 200px; overflow-x: hidden; overflow-y: auto; background: #E6E6E6; }
+.select__list li { padding: 5px 11px; cursor: pointer; line-height: 1; color: #666; }
+.select__list li:hover { background: #717791; color: #fff; }
+
+.footer { padding: 0 30px; }
+.footer .footer__in { border-top: 1px solid #d4d4d4; padding: 30px 0; text-align: center; }
+.footer .footer__in p { font-size: 15px; color: #999; margin-bottom: 20px; }
+
+.parthners { font-size: 0; }
+.parthners li { display: inline-block; vertical-align: baseline; margin: 0 20px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
