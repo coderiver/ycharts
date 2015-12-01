@@ -9,29 +9,53 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/core.css" >
+	<link rel="stylesheet" media="all" href="css/accounts.css" >
+	<link rel="stylesheet" media="all" href="css/store.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
 </head>
-<body>
+<body class="enterPage">
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- header -->
-	<header class="header">
-		<a href="#" class="logo">YCHARTS</a>
-		<nav class="nav">
-			<ul class="menu">
-				<li><a href="#">PLANS</a></li>
-				<li><a href="#">USE CASES</a></li>
-				<li><a href="#">ABOUT</a></li>
-				<li><a href="#">SIGN IN</a></li>
-			</ul>
-		</nav>
-		<div class="sales">
-			<span>sales:</span>
-			<a href="tel:8669657552">(866) 965 - 7552</a>
-		</div>
-	</header>
+	<div id="header" ng-controller="HomepageCtrl">
+	<div class="inner">
+
+	    <div id="topBar" class="cf">
+	        <div id="logoCol">
+	            <a id="logo" href="/"><img src="//d3ts3pbkmjhdi3.cloudfront.net/images/logo124x17.75c553c04748.png" alt="YCharts" width="124" height="17"/></a>
+	        </div>
+
+	        <div id="navCol" class="right">
+	            <ul id="navButs">
+	                <li class="sales">SALES (866) 965-7552</li>
+	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+	                <li class="about"><a href="/about/what_we_do">About</a></li>
+	                
+	                <li class="login"><a href="/login">Login</a></li>
+	                
+	            </ul>
+	        </div> <!-- #navCol -->
+
+	        <a id="butToggleMenu" ng-click="topNavToggle = !topNavToggle"></a>
+
+	        <div id="navColMbl" class="cf" ng-show="topNavToggle">
+	            <ul id="navButsMbl">
+	                <li class="sales">Sales (866) 965-7552</li>
+	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+	                <li class="about"><a href="/about/what_we_do">About</a></li>
+	                
+	                <li class="login" rel="nofollow"><a href="/login">Login</a></li>
+	                
+
+	            </ul>
+	        </div><!-- #navColMbl -->
+	    </div><!-- #topBar -->
+	</div><!-- .inner -->
+	</div><!-- #header -->
 
 	<div class="enter">
 		<div class="enter__in">

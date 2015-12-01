@@ -1,0 +1,685 @@
+@charset "UTF-8";
+
+
+/* Reset */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input[type=text],input[type=button],input[type=submit],textarea,th,td {margin: 0; padding: 0; outline: none; background-color: transparent; font-size: 13px; line-height: 1.3em; font-family: Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th,td,select {font-size: 1em; font-weight: normal; font-style: normal; }
+ul,ol { list-style: none; }
+input[type=button], input[type=submit]{-webkit-appearance:none; border-radius:0;}
+input[type=text],input[type=button],input[type=submit],textarea {background-color: #fff; border: 0;}
+input[type=button]::-moz-focus-inner,input[type=submit]::-moz-focus-inner {border: 0; padding: 0;}
+fieldset,img { border: none; }
+caption,th { text-align: left; }
+table {border: 0; border-collapse: collapse; border-spacing: 0; }
+td,th {padding: 0; vertical-align: top;}
+:focus {outline: none;}
+strong {font-weight: bold;}
+em {font-style: italic;}
+* {outline: none;}
+.cf:before, .cf:after{content:""; display:table;}
+.cf:after{clear: both;}
+.cf{zoom:1;}
+
+
+
+/* General */
+html {height: 100%;} /* for sticky footer, <body> too. */
+body {height: 100%; color: #000; background:#fff; text-align: center;  -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+#wrapAll {min-height: 100%;} /* for sticky footer. */
+a {color: #00c; text-decoration: none;}
+a:hover {text-decoration: underline; cursor: pointer;}
+.clear {clear: both; font-size: 0; line-height: 0; height: 0;}
+.hide {display: none;}
+.valPos {color: #00A200;}
+.valNeg {color: #f00;}
+.valNoData {color: #989898;}
+.placeholder, .disabled {color: #aaa;}
+span.bright {color: #0082E9;}
+.pro, span.pro {color: #0082E9;}
+span.black {color: #000;}
+span.red {color: #f00;}
+span.grey {color: #666;}
+input.hintEnabled {color: #757575}
+.floatL {float: left;}
+.floatR {float: right;}
+span.unsaved {color:#f00; font-weight:normal;}
+
+div.loading {position:relative; background: url(../images/loadingAnimLarge.gif) 50% 50% no-repeat;}
+.searchLoader {position: absolute; background: url(../images/loadingAnimSmall.gif) 50% 50% no-repeat; width: 16px; height: 100%; right: 5px;}
+/* Some really basic styles we use in a few housekeeping pages */
+h3.basic {margin-bottom: 7px; font-size: 15px; font-weight: bold;}
+p.basic {font-size: 14px; line-height: 1.3em; margin-bottom: 15px;}
+
+
+
+/* Page headers and footers */
+#header {clear: both; text-align: left; background-color: #000;}
+#header .inner {max-width: 1560px; min-width: 925px; height: 48px; padding: 0 20px; margin: 0 auto; background-color: #000;}
+#header .inner.fixed {width: 925px;}
+#header.simple .inner {height: 0px;}
+#header a#logo {float: left; margin: 14px 0 0 0;}
+#header div#adTags {visibility: hidden; width: 1px; height: 1px;}
+
+#search {float: left; position: relative; display: inline; min-height: 30px; width: 100%; margin: 8px 0 0 0; background-color: #fff; white-space: nowrap; position: relative;}
+#search .searchWrap {margin-right: 30px;}
+#search .search {float: left; width: 100%; height: 30px; padding: 0 0 0 8px; border: 0; vertical-align: middle; font-size: 14px;}
+#search .sbmt {width: 30px; height: 30px; padding: 0; margin: 0; border: 0; cursor: pointer; vertical-align: middle;
+background-image: url(../images/searchSbmtIcon.png); background-repeat: no-repeat; background-position: center center;}
+
+/* Top bar with liquid search box / autocompleter */
+#topBar {width: 100%; display: block;}
+#topBar #logoCol {float: left; width: 150px;}
+#topBar #srchCol {margin: 0 575px 0 150px;}
+#topBar #navCol {float: right; width: 555px;}
+#topBar #navCol.right {float: right; width: auto; margin-left: 0;}
+@media screen and (min-width: 1165px) {
+    #topBar #srchCol {width: 400px;}
+    #topBar #navCol {float: none; width: auto; margin-left: 570px;}
+}
+
+
+
+/* Nav bar */
+#navButs > li {float: left; position: relative;}
+#navButs > li > a {float: left; height: 32px; padding: 15px 15px 0 15px; color: #fff; text-align: center; font-weight: bold; text-transform: uppercase;}
+#navButs > li:hover > a {background-color: #2b2b2b; text-decoration: none;}
+#navButs > li:hover .submenu {display: block;}
+
+#navButs .plans a:hover,#navButs .trial a:hover,#navButs .login a:hover,#navButs .cases a:hover,#navButs .about a:hover {color: #ffc215;}
+#navButs li.login {float: right;}
+#navButs li.sales {padding: 15px 15px 0 15px; color: #ffc215; font-weight: bold;}
+#navButs li.custSupport {padding: 15px 0 0 0; color: #fff; font-weight: bold;}
+#navButs li.custSupport .hilite {color: #ffc215;}
+
+.submenu {display: none; position: absolute; z-index: 6; left: 0; margin: 47px 0 0 0; background-color: #2b2b2b;} /* z-index needs to be 6 or more, it seems */
+.submenu li a {float: none; display: block; padding: 8px 40px 8px 15px; color: #fff; text-align: left; font-weight: bold; white-space: nowrap; text-decoration: none;}
+.submenu li a:hover {background-color: #000; color: #ffc215; }
+.submenu .strtSec {border-top: 1px solid #000;}
+
+
+
+/* User Menu (signed in) */
+#userMenuWrap {float: right; position: relative; margin-left: 5px;}
+#userMenuWrap a {display: block; padding: 8px 15px 8px 15px; color: #fff; font-weight: bold; text-decoration: none;}
+#userMenuWrap a#userLink { height: 33px; padding: 14px 15px 0 15px; text-align: right;}
+#userMenuWrap a#userLink .name {display: inline-block; vertical-align: middle; max-width: 185px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#userMenuWrap.trial a#userLink .name {max-width: 80px;} /* may need to be adjusted; extra room needed for "X Days Remaining" */
+#userMenuWrap a#userLink .countdown {display: inline-block; vertical-align: middle; color: #00a82f;}
+#userMenu {display: none; position: absolute; z-index: 1; right: 0; min-width: 100%; text-align: left; -moz-box-shadow: 10px 10px 8px rgba(0,0,0,.2); -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.3); box-shadow: 10px 10px 8px rgba(0,0,0,.2);}
+#userMenuWrap:hover #userMenu {display: block; z-index: 20; background-color: #2b2b2b;}
+#userMenuWrap:hover a {display: block; white-space: nowrap;}
+#userMenuWrap:hover a#userLink {background-color: #2b2b2b; color: #fff;}
+#userMenuWrap:hover a:hover {background-color: #000; color: #ffc215;}
+
+
+
+/* Subnav bar */
+#subnavBarCont {margin-bottom: -10px; padding: 0 20px;}
+#subnavBarCont.withSysMsg {margin-bottom: 0px;}
+
+#subnavBar {max-width: 1560px; min-width: 925px; margin: 0 auto 0 auto; padding: 10px 0 5px 0; border-bottom: 1px solid #808080;}
+#subnavBar.fixed {width: 925px;}
+#subnavBar li {float: left; margin-right: 22px; font-size: 13px; line-height: 1.3em; font-weight: bold;}
+#subnavBar a {color: #000; text-decoration: none;}
+#subnavBar a:hover {color: #0082E9;}
+#subnavBar .on a {color: #0082E9;}
+
+
+
+/* System maintenance message */
+.sysMsg {position: relative; z-index: 0; width: 925px; height: 37px; margin: 0 auto -10px auto; padding: 10px 0 0 0; text-align: left; background-color: #fff;}
+.sysMsg .inner {position: absolute; z-index: 6; width:925px; text-align: center;}
+.sysMsg p {display:inline-block; margin: 0 auto 0 auto; padding: 8px 8px; background-color: #faf5db; border: 1px solid #000; font-size: 14px;}
+.sysMsg .maint {font-weight: bold;}
+.sysMsg .hideButton {text-decoration: none; color: #8C8C8C; margin-left: 5px; margin-right: 0; padding: 2px 2px; border: 1px solid #8C8C8C; text-align: center;}
+p.message {background-color: #faf5db; padding:10px; font-size:14px; margin-top:15px;}
+
+
+
+/* Social buttons ... used a couple different placs */
+#navSocialButs li {float: left;}
+#navSocialButs li a {float: left; width: 16px; height: 16px; margin-right:4px; background-repeat: no-repeat;}
+#navSocialButs li.facebook a {background-image: url(../images/social/facebook.png);}
+#navSocialButs li.twitter a {background-image: url(../images/social/twitter.png);}
+#navSocialButs li.stocktwits a {background-image: url(../images/social/stocktwits.png);}
+#navSocialButs.top li {margin-top: 3px;}
+#navSocialButs li.shareLabel {margin-top:4px;}
+
+
+
+/* Autocompleter styles */
+.searchAutoComp {position: absolute; z-index: 1000; width: 420px; margin: -1px 0 0 0; border: 1px solid #6d6d6d; background-color:#fff; color: #000; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5);}
+.searchAutoComp .seeAllAutoComp {float: right; margin-right: 8px; padding-right: 10px; color: #fff; font-size:13px; line-height: 1.3em; background-image: url(../images/arrowSeeAllAutoComp.png); background-repeat: no-repeat; background-position: right center; text-transform: none;}
+.searchAutoComp .sectHedAutoComp {display: block; padding: 4px 0 3px 8px; color: #fff; background-color: #474747; font-size:13px; line-height: 1.3em; text-transform: uppercase;}
+.searchAutoComp ul li {display: block; padding: 2px 0 2px 8px; border-top: 1px solid #ccc; color:#000; font-weight: bold; white-space: normal; cursor:pointer;}
+.searchAutoComp ul li.active {background-color: #FAF5DB; text-decoration: none;}
+.searchAutoComp ul li span.symb {float: left; width: 90px; padding-right: 10px; margin-right: -100px;}
+.searchAutoComp ul li span.fullname {margin-left: 100px; font-weight:normal; display: block;}
+.searchAutoComp ul li span.sub {display: block; color:#757575; font-weight: normal; min-width: 253px; margin-left: 100px;}
+
+.searchAutoComp ul li span.listFullName {font-weight:normal; display: block;}
+.searchAutoComp ul li span.listSub {display: block; color:#757575; font-weight: normal; min-width: 253px;}
+
+.searchAutoComp ul li img.sparkline {float: right; margin-left: 10px; margin-top: 4px; margin-right: 6px; border: 1px solid #ccc;}
+.seeAllAutoCompFoot {display: block; padding: 6px 0 5px 8px; border-top: 1px solid #ccc;}
+.seeAllAutoCompFoot a {padding-right: 10px; color: #0082e9; text-transform: uppercase; font-size: 13px; line-height: 1.3em; font-weight: bold;background-image: url(../images/arrowSeeAllAutoComp_blue.png); background-repeat: no-repeat; background-position: right center;}
+
+.wrapRelPos {position: relative; float:left;}
+
+/* Extra styles for main search on top of every page */
+.mainSearch .wrapRelPos {width: 100%;}
+.mainSearch .searchLoader {right: 0px;}
+.searchAutoComp.base {margin: 0 0 0 0px; width: 100%; min-width: 470px;}
+
+/* more results page */
+.resultsError {font-size: 14px; margin-top: 20px;}
+
+/* Securitylist popup ac */
+.searchAutoComp.popupSearch {width: 195px; margin-top: 28px; z-index: 200; border: 1px solid #6D6D6D; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;}
+.paneTwoSearch .wrapRelPos {padding-top: 3px;}
+.paneTwoSearch ul li {font-weight: normal;}
+input.paneTwo {width: 192px; border: 1px solid #C1C1C1 !important;}
+
+/* Metric AC + popup section styles */
+.metricSearch {width: 550px; clear: both;}
+.metricSearch p {font-weight: bold; margin-bottom: 4px;}
+.metricSearch .smlBut {padding:5px 6px 0 6px;}
+
+input.metricSubmit {margin: 0 8px 0 -1px; float: left;}
+input.metricSubmit:focus {outline: #000 dotted 1px;}
+input.metricTxt {width: 227px; float: left;}
+.searchAutoComp.metrics {margin-top: 25px; z-index: 200;}
+
+/* Search all page specific ac styles */
+.wrapSearch .srchFldResults {float: left; height: 34px; width: 460px; padding: 0 0 0 10px;
+border: 1px solid #666666; border-right-style: none; border-bottom-color: #ccc; font-size: 14px;}
+.wrapSearch .srchSbmt {float: left; width: 34px; height: 36px; cursor: pointer;
+background-image: url(../images/iconSrchFld.png); background-repeat: no-repeat; background-position: center center;
+border: 1px solid #666666; border-left-style: none; border-right-color: #ccc; border-bottom-color: #ccc; font-size: 14px;}
+
+.wrapSearch .topPagination {padding: 0; margin-bottom: 13px;}
+.wrapSearch .btmPagination {padding: 0; margin-top: 13px;}
+.wrapSearch .topViewAll {margin-top: 2px; font-size: 13px; float: right; font-weight: normal;}
+
+.wrapSrchResults {float:left; margin-top: 20px}
+.wrapSrchResults .sectAutoComp {padding-bottom: 23px; border-top: 1px solid #606060;}
+.wrapSrchResults .seeAllAutoComp {float: right; margin: 4px 8px 0 0; padding-right: 10px; color: #0082e9; font-size:14px; line-height: 1.3em;
+background-image: url(../images/arrowSeeAllAutoComp_blue.png); background-repeat: no-repeat; background-position: right center;}
+.wrapSrchResults .sectHedAutoComp {display: block; padding: 3px 0 9px 0; color: #0082e9; font-size:15px; line-height: 1.3em; font-weight: bold;}
+.wrapSrchResults ul {border-top: 1px solid #ccc;}
+.wrapSrchResults ul li {display: block; padding: 1px 0 1px 0; border-bottom: 1px solid #ccc; color:#000; font-weight: bold; white-space: normal; cursor:pointer; min-width: 712px;}
+.wrapSrchResults ul li.active {background-color: #FAF5DB; text-decoration: none;}
+.wrapSrchResults ul li span.symb {float: left; width: 110px; padding:2px 0; font-size: 14px; line-height: 1.3em;}
+.wrapSrchResults ul li span.fullname {float: left; width: 550px; padding:2px 0; font-size: 14px; line-height: 1.3em; font-weight:normal;}
+.wrapSrchResults ul li span.name {display: block; width: 650px; font-size: 14px; line-height: 1.4em;}
+.wrapSrchResults ul li span.sub {display: block; width: 550px; padding-bottom: 3px; color:#757575; font-size: 14px; line-height: 1.4em; font-weight: normal; margin-left: 110px;}
+.wrapSrchResults ul li img.sparkline_indicator {float: right; border: 1px solid #ccc; margin-top:3px;}
+.wrapSrchResults ul li img.sparkline_company {float: right; border: 1px solid #ccc; margin-top:3px;}
+.wrapSrchResults ul li img.sparkline_index {float: right; border: 1px solid #ccc; margin-top:3px;}
+.wrapSrchResults .viewAll {display: inline-block; margin-top: 10px; margin-bottom:-5px;}
+
+#colL_srchRes {float: left; width: 180px; padding-top: 5px;}
+#colR_srchRes {margin-left: 200px; padding-top: 5px;}
+
+h3#colHedL_srchRes {font-size:15px; line-height: 1.4em; font-weight: bold;}
+#listResFilters li {font-size:15px; line-height: 1.4em; font-weight: bold;}
+#listResFilters a {color: #000;}
+#listResFilters .on a {color: #0082e9;}
+
+
+
+/* Main content area boxes / dives */
+/* #mainContent has position:relative and z-index:5 to allow the auto-complete suggestion box overlay to be above the mainCol content */
+#mainContent {clear: both; position:relative; z-index: 5; text-align: left;}
+#mainContent .inner {min-width: 925px; max-width: 1560px; margin: 0 auto; padding: 20px;}
+* html #mainContent .inner {height: 300px;}
+#mainContent .inner.fixed {width: 925px; margin: 0 auto; padding: 20px;}
+#fixedCntr {width: 925px; margin: 0 auto;}
+
+#colMainPct {float: left; display: inline; width: 65.405%; margin: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+#colRailPct {float: left; display: inline; width: 34.595%; padding: 0 0 0 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+#colRailPct.railAligned {margin-top: 36px;}
+
+.padL {padding-left: 10px;}
+.padR {padding-right: 10px;}
+.padLR {padding: 0 10px;}
+.gsc-control-cse {padding: 0 !important;} /* Override google custom search padding style */
+
+/* Site-wide Ads */
+div.topLeaderAdSlot {margin: 0 0 20px 0; overflow: hidden;}
+div.topRailAdSlot {margin: 0 0 20px 0; overflow: hidden; clear: both;}
+div.bottomLeaderAdSlot {margin: 20px 0 0 0; overflow: hidden;}
+div.bottomRailAdSlot {overflow: hidden;}
+div.bottomRectAdSlot {overflow: hidden;}
+.lblAdvert {display: block; height: 8px; margin-bottom: 11px; border-bottom: 1px solid #ccc;text-align: center;}
+.lblAdvert .in {padding: 0 8px; color: #777; background-color: #fff; text-transform: uppercase; font-size: 11px; line-height: 1em;}
+
+/* Common title / header styles */
+#pgName {margin: -5px 0 15px 0; font-size: 20px; line-height: 1.3em; font-weight: bold;}
+#pgName.botOnly {display: none;}
+#pgName.tight {margin-bottom: 3px;}
+#pgName.floatL {float: left; margin-right: 10px; width: 70%;} /* Don't change the 70% here unless you talk to Ara!!! */
+#pgName.floatLVal {float: left; margin-right: 10px;}
+#pgName .smallLink {font-size: 13px; line-height: 1.3em; font-weight: normal;}
+h2.sectHed {margin-bottom: 5px; font-size: 15px; font-weight: bold;}
+h2.sectHed.floatL {float: left;}
+.sectHed a {color:#000;}
+
+
+
+/* Common Input / UI widgets */
+input.txt, input[type='text'], textarea.txt {background-color: #fff; color: #000; border: 1px solid #6D6D6D; border-right-color: #C1C1C1; border-bottom-color: #C1C1C1; -webkit-appearance: none; border-radius: 0;}
+input.submit {display: block; padding: 3px 7px; color: #000; background-color: #e5e5e5; border: 1px solid #808080; text-align: center; background-image: url(../images/bgGrad.png); background-repeat: repeat-x; background-position: 0 0; cursor: pointer;}
+input.txt.hintEnabled, input.txt.placeholder {color: #757575;}
+/* IE 7 double-padding prevention */
+input.submit {overflow: visible; display: inline-block;}
+input.submit:hover {background-image: none;}
+
+input.smlTxt {height: 19px; padding: 2px 0 3px 3px;}
+input.smlTxt.brite {background-color: #FAF5DB;}
+input.smlSubmit {height: 26px; padding: 3px 7px; font-size: 13px; line-height: 1.3em; font-family: Arial, Helvetica, sans-serif; font-weight: bold;}
+input.lrgSubmit {padding: 6px 12px 5px 12px; font-size: 15px; line-height: 1.3em; font-weight: bold;}
+
+.smlBut {display: inline-block; height:19px; padding:5px 7px 0 7px; color:#000; background-color: #e5e5e5; border: 1px solid #808080; font-weight:bold; background-image: url(../images/bgGrad.png);}
+.smlBut:hover, .smlBut:active {text-decoration:none; background-image: none;}
+
+select.slct {border: 1px solid #808080; font-family: Arial, Helvetica, sans-serif;}
+select.smlSlct {height: 24px; font-size: 13px;}
+select.medSlct {height: 26px; font-size: 14px;}
+select.bigSlct {height: 30px; font-size: 16px;}
+
+select.slct:focus, select.medSlct:focus, select.bigSlct:focus {-moz-box-shadow: 0 0 6px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5); box-shadow: 0 0 6px rgba(0,0,0,0.5);}
+
+a.xClose {display: block; width: 16px; height: 16px; background-image: url(../images/butXClose.png); background-repeat: no-repeat; background-position: 0 0;}
+a.xClose:hover {background-position: 0 -34px;}
+
+div.uiLbl {font-weight: bold; margin: 0 0 3px 0;}
+
+
+
+/* Common loading box */
+div.loadingBox {position: relative; z-index: 75; background-color: #fff; height: 280px; padding-top: 20px; width: 100%;}
+div.loadingBox .loadingPopup {margin: 60px auto 0 auto; padding: 20px 8px; width: 400px; background-color: #fff; border: 1px solid #808080;}
+div.loadingBox .loadingPopup .popupMessage {font-weight: bold; font-size: 18px; margin: 0 auto; text-align: center;}
+div.loadingBar {margin: 20px auto 0 auto; background: url(../images/loadingAnimBarLarge.gif) 50% 50% no-repeat; height: 15px; width: 128px;}
+
+div.loadingBox.slim .loadingPopup {border: none; width: 300px;}
+div.loadingBox.slim .loadingPopup .popupMessage {font-size: 14px;}
+div.loadingBox.slim div.loadingBar {margin: 10px auto 0 auto;}
+
+/* Common loading more box */
+div.loadingMoreBox {position: relative; z-index: 75; background-color: transparent; margin: -80px 0px}
+div.loadingMoreBox .loadingMorePopup { padding: 10px; margin:0px auto; width: 400px; background-color: #fff; border: 1px solid #808080;}
+div.loadingMoreBox .loadingMorePopup .loadingMorePopupMessage {font-weight: bold; font-size: 18px; margin: 0 auto; text-align: center;}
+div.loadingMoreBar {margin: 20px auto 0 auto; background: url(../images/loadingAnimBarLarge.gif) 50% 50% no-repeat; height: 15px; width: 128px;}
+
+
+
+/* Common tabbed nav bar */
+.tabbedNavBar {border-bottom: 1px solid #bebebe; height: 26px; margin: 0 0 10px 0; padding: 0;}
+
+.tabbedNav {float: left; height: 32px;}
+.tabbedNav li {float: left; display: inline; border: 1px solid #bebebe; border-width: 1px 1px 1px 0;}
+.tabbedNav li a {float: left; display: inline; height: 20px; padding: 5px 9px 0 9px; color: #000; background-color: #F2F2F2; text-align: center;}
+.tabbedNav li a:hover {background-color: #ddd; text-decoration: none;}
+.tabbedNav li.on {height: 21px; padding: 5px 9px 0 9px; text-align: center; border-bottom: none; background-color: #fff;}
+.tabbedNav li.on a {background-color: #fff; padding: 0px 0px 0px 0px;}
+.tabbedNav li.firstChild {border-left: 1px solid #bebebe;}
+
+
+
+/* Common chart tooltip boxes for hover over style tooltips used in smaller charts and embeds */
+.ychartsTooltipWrap {width: 180px; cursor: pointer; z-index: 200;}
+.ychartsTooltipBox {width: 170px; padding: 3px 4px; background-color: #fff; border: 1px solid #808080; font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+.ychartsTooltipPoint {width: 14px; height: 18px; margin: -1px 0 0 50px; background-image: url(../images/tooltipPointDown.png); background-repeat: no-repeat; background-position: 0 0;}
+.ychartsTooltipBox div.ychartsTooltipHeader {font-size: 12px; font-weight: bold; line-height: 14px; text-align: left;}
+.ychartsTooltipBox table.ychartsTooltipData {border: 0; border-collapse: collapse; border-spacing: 0; margin: 0; width: 100%;}
+.ychartsTooltipBox table.ychartsTooltipData td.ychartsTitle {padding: 0; font-size: 12px; font-weight: bold; text-align: left; line-height: 14px;}
+.ychartsTooltipBox table.ychartsTooltipData td.ychartsLabel {padding: 0; font-size: 12px; font-weight: bold; text-align: left; line-height: 14px;}
+.ychartsTooltipBox table.ychartsTooltipData td.ychartsData {padding: 0; font-size: 12px; font-weight: bold; text-align: right; line-height: 14px;}
+
+
+
+/* Common tooltip styles */
+.tooltipHolder {float: left; position: relative; z-index: 200; display: none;}
+.tooltipHolder.open {display: block;}
+.tooltipWrap {position: absolute;}
+
+/* note: border-collapse "separate" fixes shadows in IE9 that are within tables because our tables use "collapse" instead */
+.tooltip {width: 156px; padding: 8px; background-color: #fff; border: 1px solid #808080; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5); border-collapse: separate;}
+.tipLeft .tooltip {margin: 0 0 0 6px;}
+.tipRight .tooltip {margin: 0 16px 0 0;}
+
+.tooltipWrap .point {position: absolute; display: block;}
+
+
+
+/* Cascading menu styles (e.g. Data options & Metric set options) */
+/* NOTE: this is a base style that cannot be used on its own - you need to add a width property to
+   the element that gets the cascadeMenuWrap class and the same value needs to be the left margin of
+   the element that gets the cascadeMenuDrilldn class.  See '#dataOptionsControlFrame .cascadeMenuWrap' in export_center.css */
+.cascadeMenuWrap {position: absolute; margin-top: -1px; border: 1px solid #808080; background-color: #fff; display:none; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5); z-index: 200;}
+.cascadeMenuWrap.open {display:block;}
+.cascadeMenuWrap .cascadeMenu li {float: none !important; display: block; margin: 0 !important;}
+.cascadeMenuWrap .cascadeMenu li.disabled a.dropdownOptionItem {color:#b4b4b4; cursor: default;}
+.cascadeMenuWrap .cascadeMenu li.disabled a.dropdownOptionItem:hover {background-color: #fff;}
+.cascadeMenuWrap .cascadeMenu a {display: block; font-weight: normal !important; padding: 3px 8px; color: #000; line-height:1.2em;}
+.cascadeMenuWrap .cascadeMenu a:hover {background-color:#FAF5DB; text-decoration:none;}
+.cascadeMenuWrap .cascadeMenu a.selected {background-color: #ddd; text-decoration: none;}
+.cascadeMenuWrap .cascadeMenu a.drillDn {background-image: url(../images/arrowDrilldn.png); background-repeat: no-repeat; background-position: right center;}
+.cascadeMenuWrap .cascadeMenu a.drillDnSelected {background-color: #ddd;}
+.cascadeMenuWrap .cascadeMenuDrilldn {position: absolute; border: 1px solid #808080; background-color: #fff; display:none; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5);}
+.cascadeMenuWrap .cascadeMenuDrilldn.open{display:block;}
+.cascadeMenuWrap .cascadeMenuDrilldn a {white-space: nowrap;}
+.cascadeMenuWrap .cascadeMenuDrilldn .subHeader {font-weight: bold !important; padding: 3px 8px; white-space: nowrap;}
+.cascadeMenuWrap .cascadeMenuDrilldn a:hover,.cascadeMenuWrap .cascadeMenuDrilldn a.selected {background-color: #FAF5DB; text-decoration: none;}
+.cascadeMenuWrap.chk {padding: 3px 0;}
+.cascadeMenuWrap span.chk {display: block; padding: 3px 8px;}
+.cascadeMenuWrap span.chk input {margin: 0 5px 0 0;}
+
+
+
+/* Popup menus */
+/* general styles */
+.lbPopupMenu {position: fixed; top: 200px; left:50%; background-color: red; text-align:left; z-index: 1000;}
+.popMenuWrap {position: absolute; z-index:200; background-color: #fff; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5);}
+
+.popMenuWrap a.xClose {float: right; margin: 4px 4px 0 0;}
+.popMenuWrap h2.popMenuHed {padding: 3px 0 1px 0; border: 1px solid #808080; background-color: #f7f7f7; text-align: center; font-size: 13px; line-height: 1.4em;}
+.popMenuWrap .popMenuSrch {padding: 10px 0; background-color: #f7f7f7; border: 1px solid #808080; border-top: none;}
+.popMenuWrap .popMenuSrchInpt {margin-left: 105px; height: 19px; padding: 2px 0 3px 3px; width: 550px; border: 1px solid #808080; border-right: none;}
+.popMenuWrap .popMenuSrchSbmt {background-image: url(../images/iconPopSrchFld.png); height: 26px; width: 26px; background-repeat: no-repeat; background-position: center center; padding: 2px 0 3px 0; border: 1px solid #808080; border-left: none;}
+.popMenuWrap .popMenuSrchRslts {width: 578px; margin: -1px 0 0 105px;}
+.popMenuWrap .popMenuSrch .searchLoader {top: 0px;}
+
+.popMenuWrap .popMenuFootSpc {clear: both; height: 20px; background-color: #f7f7f7; border:1px solid #808080;}
+.popMenuWrap .popMenuFootSpcSubmit {clear: both; height: 45px; background-color: #f7f7f7; border:1px solid #808080;}
+.popMenuWrap .popMenuFootSpcSubmit a.smlBut {float:right;margin:9px 9px 10px 0;}
+.popMenuWrap .popMenuPane {float: left; display: inline; width: 263px; border-left: 1px solid #CBCBCB;}
+.popMenuWrap .popMenuPane1 {border-left-color: #808080;}
+.popMenuWrap .popMenuPane3 {border-right: 1px solid #808080;}
+.popMenuWrap .popListScroller {overflow: auto; height: 316px;}
+.popMenuWrap ul.popMenuList li {float: none !important; display: block !important; margin: 0; color: #000; font-size: 13px; line-height: 1.3em;}
+.popMenuWrap ul.popMenuList li.listSectHed {padding: 2px 6px; font-weight: bold;}
+.popMenuWrap ul.popMenuList li.listSectHed .spacer {margin: 5px 0 5px 0; border-bottom: 1px solid #CBCBCB;}
+.popMenuWrap ul.popMenuList li.searchResult {padding: 6px;}
+.popMenuWrap ul.popMenuList li.listColIntro {padding: 2px 6px;}
+.popMenuWrap ul.popMenuList li.listColIntro a {display: inline; padding-left: 0; line-height: 2em; color: #00f; text-decoration: underline;}
+.popMenuWrap ul.popMenuList li.listColIntro a:hover {background-color: transparent;}
+.popMenuWrap ul.popMenuList a {display: block; padding: 2px 8px; color: #000; font-weight: normal !important;}
+.popMenuWrap ul.popMenuList.sectioned a {padding-left: 12px;}
+.popMenuWrap ul.popMenuList a:hover {background-color: #FAF5DB; text-decoration: none;}
+.popMenuWrap ul.popMenuList a.chosen, .popMenuWrap ul.popMenuList a.drillDnSelected, .popMenuWrap ul.popMenuList a.formatSelected {background-color: #ddd;}
+.popMenuWrap ul.popMenuList a.editSelection {display: inline; color: #00c; text-decoration: none;}
+.popMenuWrap ul.popMenuList a.editSelection:hover {background-color: inherit; text-decoration: underline; cursor: pointer;}
+.popMenuWrap ul.popMenuList a.header {display: inline; text-decoration: none; font-weight: bold !important; cursor: default; pointer-events: none;}
+.popMenuWrap ul.popMenuList a.header:hover {background-color: transparent; display: inline; text-decoration: none; font-weight: bold !important;}
+.popMenuWrap ul.popMenuList div.selectedResult {margin-top: 5px}
+.popMenuWrap .plat {color: #6BA4C1; font-weight: bold;}
+.popMenuWrap .gold {color: #E8A600; font-weight: bold;}
+.popMenuWrap p.alert {color: #f00;}
+.popMenuWrap .popListScroller.alert {height: 300px;}
+
+/* metric and securitylist menu popups */
+.metricPopup {width: 794px; margin-left:-397px;}
+.popMenuPane .paneThreeHeader {font-weight: bold;}
+.popListScroller.paneThree {margin: 0 5px;}
+.popMenuPane .sectInfo {margin: 6px 0 0 3px; font-weight: normal;}
+.popMenuPane .sectSubmit {margin: 20px 0 0 3px;}
+.sectInfo a.dropdownHandleSmall {width: 212px;}
+.popMenuPane .sectInfo ul {list-style-type: disc; list-style-position: inside;}
+
+.securitylistPopup {width: 794px; margin-left:-397px;}
+
+/* Metric-specific */
+.popMenuWrap h3.paneHed {padding: 5px 6px 4px 6px; border-bottom: 1px solid #CBCBCB; color: #898989; font-size: 13px; line-height: 1.4em; font-weight: bold;}
+
+/* Securitylist specific */
+.popMenuWrapSecuritylist .boxCtrls {padding: 8px 12px; background-color: #f7f7f7; border: 1px solid #808080; border-width: 0 1px 1px 1px;}
+.popMenuWrapSecuritylist .radioList li {float: left; margin-right: 20px; font-size: 13px; line-height: 1.4em;}
+
+/* Info field menu popup */
+.infoPopup {width: 634px; margin-left: -317px;}
+.infoPopup .popMenuWrap .popMenuPane {width: 315px;}
+.infoPopup .popMenuWrap .popMenuPane2 {border-right: 1px solid #808080;}
+.infoPopup .popMenuWrap .popMenuSrchInpt {width: 392px;}
+.infoPopup .popMenuWrap .popMenuSrchRslts {width: 420px}
+.infoPopup  .popMenuWrap .popListScroller {height: 240px;}
+
+/* Help popups */
+.helpPopup.lbPopupMenu {margin-left: -370px;}
+.helpPopup > div > .popMenuWrap > .popMenuContent {width: 740px;  border: 1px solid #808080; border-width: 0 1px 1px 1px;}
+.helpPopup > div > .popMenuWrap > .scrollHelpPopup {background-color: #fff; max-height: 300px; overflow: auto; padding: 16px 20px 20px 20px;}
+.helpPopup > div > .popMenuWrap > .popMenuContent > div > h4 {font-size: 19px; margin-bottom: .8em; font-weight: bold;}
+.helpPopup > div > .popMenuWrap > .popMenuContent > div > h5 {font-size: 15px; margin-bottom: .5em; font-weight: bold;}
+.helpPopup > div > .popMenuWrap > .popMenuContent > div > p {font-size: 14px; margin-bottom: .4em; line-height: 1.3em;}
+.helpPopupPadL {padding-left: 5px;}
+
+/* Select popup */
+.selectPopup {margin-left: -185px;}
+.selectPopup > div > .popMenuWrap > .popMenuContent {width: 370px; border: 1px solid #808080; border-width: 0 1px 1px 1px;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup {max-height: 300px; overflow: auto; padding: 16px 20px 20px 20px;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup > h4 {font-size: 19px; margin-bottom: .8em; font-weight: bold;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup > .sortTable {margin: 0;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup > .sortTable td {text-align: left;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup > .sortTable td:first-child {padding-left: 0;}
+.selectPopup > div > .popMenuWrap > .scrollSelectPopup > .sortTable tr:first-child td {border-top: 1px solid #ccc;}
+
+/* Prompt popup */
+.promptPopup.lbPopupMenu {margin-left: -200px;}
+.promptPopup label {font-weight: bold; display: block; margin: 0 0 5px;}
+.promptPopup > div > .popMenuWrap {background-color: #f7f7f7; border: 1px solid #808080; width: 400px;}
+.promptPopup > div > .popMenuWrap > h2.popMenuHed {border-width: 0 0 1px; padding: 4px 2px 2px 2px;}
+.promptPopup .colPopMenu {margin: 15px;}
+.promptPopup .wrapRelPos {float: none;}
+.promptPopup .wrapRelPos input[type="text"] {float: left; min-height: 19px; border-right:none;}
+.promptPopup .wrapRelPos input[type="text"].rename {width:297px;}
+
+/* Confirm popup */
+.confirmPopup.lbPopupMenu {margin-left: -200px; margin-top: -59px;}
+.confirmPopup .overlay {opacity: .2;}
+.confirmPopup form {float:right;}
+.confirmPopup label {font-weight: bold; display: block; margin: 0 0 5px;}
+.confirmPopup > div > .popMenuWrap {background-color: #f7f7f7; border: 1px solid #808080; width: 400px;}
+.confirmPopup > div > .popMenuWrap > h2.popMenuHed {border-width: 0 0 1px; padding: 4px 2px 2px 2px;}
+.confirmPopup .colPopMenu {margin: 15px;}
+.confirmPopup .wrapRelPos {float: none;}
+
+/* Common basic dropdown styles */
+.dropdownMenu {display:none; position:absolute; z-index: 200; background-color:#fff; border:1px solid #808080; -moz-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,0.5); box-shadow: 3px 3px 10px rgba(0,0,0,0.5); }
+.dropdownMenu.open {display:block;}
+.dropdownMenu .menuItems a {display: block; padding: 3px 7px; color: #000;}
+.dropdownMenu .menuItems a:hover {background-color: #FCF6D2; text-decoration: none;}
+
+/* Dropdown handles */
+a.dropdownHandleSmall {display: block; height: 19px; padding: 5px 26px 0 7px; color:#000; border: 1px solid #808080; text-decoration: none; background: #f7f7f7 url('../images/bgPulldn.png') right 9px no-repeat; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+a.dropdownHandleSmall:hover {background-color: #dddddd; cursor: pointer;}
+
+
+
+/* Common error / success styles */
+div.error {margin: 0 0 20px 0; color: #f00;}
+div.error p { font-size: 14px;}
+div.error h2.hed {margin: 0 0 3px 0; font-size: 15px; font-weight: bold;}
+div.error ul.items {list-style-type: none;}
+div.error ul.items li {font-size: 14px;}
+
+div.success {margin: 0 0 20px 0; color: #00A200;}
+div.success h2.hed {margin: 0 0 3px 0; font-size: 15px; font-weight: bold;}
+div.success p.msg {font-size: 14px;}
+
+
+
+/* Common scoring stuff */
+/* NOTE: stupid capitalization because calling these gradeX made less sense*/
+.NoData {color: #989898;}
+.Good, .Excellent, .Strong, .Attractive {color: #00A200;}
+.Poor, .Weak, .Avoid, .Below {color: #F00;}
+
+
+
+/* Common boxes */
+.box {border-top: 3px solid #000; padding: 3px 0 0 0; zoom: 1;}
+.boxRail {margin-bottom: 20px;}
+
+.boxQuotes {margin-bottom: 20px;}
+.boxQuotes ul {border-top: 1px solid #ccc;}
+.boxQuotes li {border-bottom: 1px solid #ccc; padding: 3px 0;}
+
+ul.codesExcel {margin: 18px 0 15px 0; border-top: 1px solid #ccc;}
+ul.codesExcel li {padding: 4px 0; border-bottom: 1px solid #ccc; word-break: break-all;}
+.boxCodes p {margin: 0 0 .8em 0;}
+
+
+
+/* Common button styles */
+/* Green button */
+a.greenButAuto {display: inline-block; text-decoration: none; margin: 0;}
+a.greenButAuto.register{float:left}
+a.greenButAuto span { background-image: url(../images/butGreen500.png);}
+a.greenButAuto .type {float: left; height: 29px; padding: 12px 7px 0 12px; color:#fff; font-size:19px; font-weight:bold;
+ background-repeat: no-repeat; background-position: 0 0;}
+a.greenButAuto .endCap {float: right; width: 5px; height: 41px; background-repeat: no-repeat; background-position: right 0;}
+a.greenButAuto:hover .type {background-position: 0 -80px;}
+a.greenButAuto:hover .endCap {background-position: right -80px;}
+
+/* HTML/CSS based rounded-corner button, with small and blue variety */
+a.butSolid {display: inline-block; padding: 13px 20px 14px 20px; margin-right: 6px; color: #fff; background-color: #000; font-size: 24px; line-height: 1em; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;}
+a.butSolid.sml {font-size: 20px; line-height: 1em;}
+a.butSolid.marginBottom {margin-bottom: 6px;}
+a.butSolid.bigMarginBottom {margin-bottom: 15px;}
+a.butSolid.fixed {width: 150px; text-align: center;}
+a.butSolid.blue {background-color: #0082E9;}
+a.butSolid.blue:hover {background-color: #0098FF; text-decoration: none;}
+a.butSolid.grey {background-color: #7f7f7f;}
+a.butSolid.grey:hover {background-color: #919191; text-decoration: none;}
+a.butSolid.arrow {padding-right: 50px; background-image: url('../images/goArrow.png'); background-repeat: no-repeat; background-position: right 14px center;}
+.mediumBlue {color: #0082E9;}
+
+
+
+/* Common pagination styles */
+ol.pagin {height: 35px;}
+ol.pagin li {float: left; display: inline; margin-right: 10px;}
+ol.pagin .active {color: #f00;}
+ol.pagin a.first,ol.pagin a.prev,ol.pagin a.next,ol.pagin a.last {background-image: url(../images/spritePagin.png); background-repeat: no-repeat;}
+ol.pagin a.first {background-position: 0 2px; padding-left: 11px;}
+ol.pagin a.prev {background-position: 0 -22px; padding-left: 10px;}
+ol.pagin a.next {background-position: right -46px; padding-right: 12px;}
+ol.pagin a.last {background-position: right -70px; padding-right: 12px;}
+ol.pagin li.null {color: #969696;}
+
+.pagination .brite {color: #f00;}
+.pagination .links {color: #969696;}
+
+
+
+/* Common sortable table styles */
+.sortTable {clear:both; width:100% ;margin: 0px 0 20px 0;}
+.sortTable th, .sortTable td {padding:3px 3px; border-bottom:1px solid #ccc;}
+
+.sortTable th.colHead {padding:2px 4px 2px 4px; text-align:right; font-weight:bold; line-height:1.3em; vertical-align:bottom; border: 1px solid #808080; border-width:0 1px 1px 0;}
+.sortTable th.colHead.first {padding-left: 0px;}
+.sortTable th.colHead.last {padding-right: 0px; border-right:0px;}
+
+.sortTable th.colAction {cursor: pointer;}
+.sortTable th.colAction:hover {background-color:#e6e6e6;}
+
+.sortTable .first {padding-left: 0px;}
+.sortTable td.last {padding-right: 0px;}
+.sortTable td {text-align:right;}
+
+.sortTable th div.label {padding-left: 12px; padding-right: 0; background-repeat: no-repeat; background-position: left bottom;}
+.sortTable th.desc, .sortTable th.asc {background-color:#e6e6e6;}
+.sortTable th.desc div.label {background-image: url(../images/sortArwDn.png);}
+.sortTable th.asc div.label {background-image: url(../images/sortArwUp.png);}
+
+/* Sortable companies */
+.sortTable td.colSym, .sortTable th.colSym, .sortTable td.colName, .sortTable th.colName {text-align: left;}
+.sortTable th.colSym div.label, .sortTable th.colName div.label {padding-right: 12px; padding-left: 0px; background-repeat: no-repeat; background-position: right bottom;}
+
+/* Essential css for tablesort directive */
+.sortTable th.desc, .sortTable th.asc, .tablesort-asc, .tablesort-desc {background-color:#e6e6e6;}
+.sortTable th.desc div.label, .tablesort-desc div.label {background-image: url(../images/sortArwDn.png);}
+.sortTable th.asc div.label, .tablesort-asc div.label {background-image: url(../images/sortArwUp.png);}
+
+.showIfLast {display: none;}
+/* Only show it if it is also the last row of the table. */
+.showIfLast:last-child {display: table-row;}
+.showIfLast td {text-align: center;}
+.showIfLast td:after {content: "No data";}
+
+
+
+/* A very basic data table used in a few places that have simple lists of securities */
+.dataTable {width: 100%;}
+.dataTable th,.dataTable td {vertical-align: middle; text-align: right; border-bottom: 1px solid #ccc;}
+.dataTable td {padding: 3px 0;}
+.dataTable th.colHead {padding: 4px 0 4px 0; font-weight: bold; vertical-align: bottom; border-color: #919191;}
+.dataTable th.colSym, .dataTable td.colSym {width: 71px; padding-left: 0; text-align: left;}
+.dataTable th.colNam, .dataTable td.colNam {padding-left: 0;  text-align: left;}
+
+
+
+/* News feed related styles */
+#streamScroller {height: 232px; overflow-y: auto; overflow-x: hidden; margin-bottom: 15px;}
+div.streamScroller {height: 232px; overflow-y: auto; overflow-x: hidden; margin-bottom: 15px;}
+
+.timeStamp {color:#000;}
+.timeStampBrite {color: #FF1D25;}
+.source {color: #999;}
+
+#colRailPct .newsItem {padding: 4px 5px 4px 0;}
+.newsItem.inFromStream {display:none;}
+
+
+
+/* Inline watchlist styles used in various apps */
+.tipWatchLink .hed {display: block; padding-bottom: 2px; font-weight: bold;}
+.tipWatchLink .lists {display: block; padding-bottom: 10px; color: #00c;}
+.tipWatchLink .listsOn {display: block; padding-bottom: 10px;}
+.tipWatchLink .listsOn a.remove {color: #999;}
+.tipWatchLink div.tooltip { overflow:hidden; text-align:left;}
+.tipWatchLink input.newWatchlist {width: 105px; margin: 3px 4px 0 0;}
+.tipWatchLink .watchlistItem { display:block;}
+.tipWatchLink.tipTop .tooltipWrap .point {background-image: url(../images/tooltipPointTop.png); width: 12px; height: 7px;}
+.tipWatchLink.tipRight .tooltipWrap .point {background-image: url(../images/tooltipPointRight.png); width: 7px; height: 12px;}
+
+
+
+/* Register, product upsell and upgrade popup forms */
+#regPopupForm, #versionHelpPopup {display:none;}
+#regPopupForm.show, #versionHelpPopup.show {display:block;}
+a.popupXClose {display: block; margin-right: -13px; float: right; width: 16px; height: 16px; background-image: url(../images/closeX.png); background-repeat: no-repeat; background-position: 0 0;}
+
+.overlay {position:fixed; z-index: 200; width:100%; height:100%; top:0; background-color:#666; opacity:.7; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); left:0px;}
+
+.lbPopupForm {position:fixed; top:100px; width:570px; left:50%;margin-left:-305px; padding: 7px 20px 25px 20px; border: 1px solid #000; background-color:#fff;text-align:left;z-index: 1000;}
+
+.lbPopupForm a.closeLink {float: right; color: #797979; text-decoration: underline;}
+.lbPopupForm .lbHedLrg {margin: 5px 0 13px 0; font-size:20px;font-weight:bold; line-height:1.3em;}
+.lbPopupForm h4.lbSubHedLrg {margin: 0 0 1.2em 0; font-size:20px; line-height:1.4em;}
+.lbPopupForm p.lbIntro {margin: 5px 0 10px 0; font-size: 16px;}
+.lbPopupForm p.lbPriceQuote {margin:0 0 20px 0;  font-size: 16px; font-weight: bold;}
+.lbPopupForm a.greenButAuto {float: left;}
+.lbPopupForm .postSubmitLine {float: left; margin: 20px 0 0 0; font-size: 16px; line-height: 1.3em;}
+
+.lbPopupForm .formRow {margin: 0 0 13px 0;}
+.lbPopupForm .fieldCap {padding-left: 5px;}
+.lbPopupForm label.lab {float: left; display: inline; width: 145px; margin: 4px 0 0 0; font-weight:bold; font-size:14px;}
+.lbPopupForm .req {padding: 0 0 0 8px; color: #808080; font-size: 14px; line-height: 1.3em;}
+
+#regPopupForm .lbHedLrg {margin: 11px 0 9px 0;}
+#regPopupForm .noCreditReq {font-size: 20px; line-height: 1.1em;}
+#regPopupForm p.signinLine {margin: 22px 0 0 0; font-size: 16px; line-height: 1.1em;}
+
+#upsellPopupForm .lbHedLrg {margin: 11px 0 9px 0;}
+#upsellPopupForm .noCreditReq {font-size: 20px; line-height: 1.1em;}
+#upsellPopupForm p.signinLine {margin: 22px 0 0 0; font-size: 16px; line-height: 1.1em;}
+
+
+
+/* Pro / sales content thats used several places */
+p.introPara {margin: -2px 0 16px 0; font-size: 14px; line-height: 1.3em;}
+
+.sampleScreen {display: inline-block; margin: 15px 0 15px 0; border: 1px solid #808080; -moz-box-shadow: 4px 4px 10px #999; -webkit-box-shadow: 4px 4px 10px #999; box-shadow: 4px 4px 10px #999; background-repeat: no-repeat;}

@@ -1,238 +1,175 @@
-// fonts
-+font(GothamBold, GothamBold)
-=gotham-b
-	font-family: 'GothamBold', sans-serif
-	font-weight: normal
-	font-style: normal
-+font(AkzidenzGroteskBE-Md, AkzidenzGroteskBE-Md)
-=akziden-m
-	font-family: 'AkzidenzGroteskBE-Md'
-	font-weight: normal
-	font-style: normal	
-+font(AkzidenzGroteskBE-Regular, AkzidenzGroteskBE-Regular)	
-=akziden
-	font-family: 'AkzidenzGroteskBE-Regular'
-	font-weight: normal
-	font-style: normal
 
-body
+body.enterPage	
 	+akziden
 	font-size: 12px
 	line-height: 1.4
-	+g(rgba(#ccc, 0.4), #fff)
-
-
-// common blocks
-
-.header
-	position: relative
-	height: 36px
-	padding: 5px 15px 5px 10px
-	background: #000 
-.logo
-	float: left
-	+gotham-b
-	font-size: 20px
-	text-transform: uppercase
-	color: #fff
-	text-decoration: none
-	&:first-letter
-		color: #0082E9
-.sales
-	float: right
-	font-size: 0
-	padding-top: 2px 
-	span, a
-		display: inline-block
-		vertical-align: middle
-		+akziden-m
+	box-sizing: border-box
+	.out
+		+g(rgba(#ccc, 0.4), #fff)
+	.enter
+		padding-top: 58px
+		*, *:before, *:after
+			box-sizing: inherit
+		.enter__in
+			max-width: 335px
+			text-align: center
+			margin: 0 auto 				 
+	.title
+		margin-bottom: 20px
+		font-size: 28px
+		color: #0082E9 
+	.info
+		margin-bottom: 35px
 		font-size: 15px
-		color: #FFCE00
-		text-decoration: none
-	span
-		text-transform: uppercase
-		margin-right: 5px
-		font-size: 15px
-.nav		 
-	float: right
-	padding-top: 2px
-.menu
-	font-size: 0
-	li
-		display: inline-block
-		vertical-align: middle
-		margin-left: 30px
-		a
-			font-size: 15px
-			text-transform: uppercase
-			color: #fff
-			+akziden-m
-			text-decoration: none
-			transition: color 200ms
-			&:hover
-				color: #FFCE00
-.enter
-	padding-top: 58px
-	.enter__in
-		max-width: 335px
-		text-align: center
-		margin: 0 auto 				 
-.title
-	margin-bottom: 20px
-	font-size: 28px
-	color: #0082E9 
-.info
-	margin-bottom: 35px
-	font-size: 15px
-	color: #666
-	a	
-		color: #0316FF
-		text-decoration: none
-		&:hover
-			text-decoration: underline
-
-.form
-	margin-bottom: 20px
-	.form__row
-		+clr
-		display: block
-		margin-bottom: 10px
-		text-align: left
-		p
-			color: #999
-			font-size: 14px
-			small
-				color: #B3B3B3
-				font-size: 12px 
-	.form__bottom
-		padding-top: 20px
-	.form__footer
-		+clr
-		padding-top: 19px
-		.checkbox
-			float: left
-	.form__col
-		float: left
-		width: 47.5%
-		margin-left: 5%
-		&:first-child
-			margin-left: 0
-	&.form_reg
-		.form__footer
-			padding-top: 0
-			padding-bottom: 19px 		 				
-.input
-	width: 100%
-	height: 40px
-	border: 1px solid #b2b2b2
-	background: #fff
-	padding: 0 5px
-	font-size: 15px    		
-.btn
-	width: 100%
-	height: 40px
-	vertical-align: middle
-	text-align: center
-	color: #fff
-	+akziden-m
-	font-size: 15px
-	background: #0082E9    
-.checkbox
-	font-size: 0
-	text-align: left
-	input
-		float: left
-		margin-right: 5px
-	span
-		font-size: 13px
-		color: #000
-		+nosel
-		a
+		color: #666
+		a	
+			color: #0316FF
 			text-decoration: none
 			&:hover
 				text-decoration: underline
-.forgor
-	float: right
-	color: #0316FF
-	text-decoration: none
-	font-size: 13px
-	&:hover
-		text-decoration: underline  	 	
-// select
-.select
-	position: relative
-	cursor: pointer
-	font-size: 12px
-	select
-		position: absolute
-		opacity: 0
-.select__text
-	position: relative
-	height: 40px
-	line-height: 44px
-	color: #8f8e8e
-	border: 1px solid #b2b2b2
-	text-transform: uppercase
-	white-space: nowrap
-	overflow: hidden
-	text-overflow: ellipsis
-	background: #fff
-	border-right: 1px solid #d0cfcf
-	padding: 0 16px
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		bottom: 0
-		right: 0
-		width: 40px
-		background: #F2F2F2
-	&:after
-		content: ""
-		position: absolute
-		right: 15px
-		top: 50%
-		margin-top: -3px
-		+arr(11, 6, #8f8e8e, b)
-.select__list
-	position: absolute
-	display: none
-	left: 0
-	right: 0
-	top: 100%
-	z-index: 100
-	padding: 10px 0 
-	border-top: 0 
-	max-height: 200px
-	overflow-x: hidden
-	overflow-y: auto
-	background: #E6E6E6
-	li
-		padding: 5px 11px 
-		cursor: pointer
-		line-height: 1
-		color: #666
-		&:hover
-			background: #717791
-			color: #fff
 
-// footer
-.footer
-	padding: 0 30px
-	.footer__in
-		border-top: 1px solid #d4d4d4
-		padding: 30px 0
+	.form
+		margin-bottom: 20px
+		.form__row
+			+clr
+			display: block
+			margin-bottom: 10px
+			text-align: left
+			p
+				color: #999
+				font-size: 14px
+				small
+					color: #B3B3B3
+					font-size: 12px 
+		.form__bottom
+			padding-top: 20px
+		.form__footer
+			+clr
+			padding-top: 19px
+			.checkbox
+				float: left
+		.form__col
+			float: left
+			width: 47.5%
+			margin-left: 5%
+			&:first-child
+				margin-left: 0
+		&.form_reg
+			.form__footer
+				padding-top: 0
+				padding-bottom: 19px 		 				
+	.input
+		width: 100%
+		height: 40px
+		border: 1px solid #b2b2b2
+		background: #fff
+		padding: 0 5px
+		font-size: 15px    		
+	.btn
+		width: 100%
+		height: 40px
+		vertical-align: middle
 		text-align: center
-		p
-			font-size: 15px
-			color: #999
-			margin-bottom: 20px
-.parthners
-	font-size: 0
-	li
-		display: inline-block
-		vertical-align: baseline
-		margin: 0 20px  
+		color: #fff
+		+akziden-m
+		font-size: 15px
+		background: #0082E9    
+	.checkbox
+		font-size: 0
+		text-align: left
+		input
+			float: left
+			margin-right: 5px
+		span
+			font-size: 13px
+			color: #000
+			+nosel
+			a
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+	.forgor
+		float: right
+		color: #0316FF
+		text-decoration: none
+		font-size: 13px
+		&:hover
+			text-decoration: underline  	 	
+	// select
+	.select
+		position: relative
+		cursor: pointer
+		font-size: 12px
+		select
+			position: absolute
+			opacity: 0
+	.select__text
+		position: relative
+		height: 40px
+		line-height: 44px
+		color: #8f8e8e
+		border: 1px solid #b2b2b2
+		text-transform: uppercase
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		background: #fff
+		border-right: 1px solid #d0cfcf
+		padding: 0 16px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 40px
+			background: #F2F2F2
+		&:after
+			content: ""
+			position: absolute
+			right: 15px
+			top: 50%
+			margin-top: -3px
+			+arr(11, 6, #8f8e8e, b)
+	.select__list
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		z-index: 100
+		padding: 10px 0 
+		border-top: 0 
+		max-height: 200px
+		overflow-x: hidden
+		overflow-y: auto
+		background: #E6E6E6
+		li
+			padding: 5px 11px 
+			cursor: pointer
+			line-height: 1
+			color: #666
+			&:hover
+				background: #717791
+				color: #fff
+
+	// footer
+	.footer
+		padding: 0 30px
+		.footer__in
+			border-top: 1px solid #d4d4d4
+			padding: 30px 0
+			text-align: center
+			p
+				font-size: 15px
+				color: #999
+				margin-bottom: 20px
+	.parthners
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: baseline
+			margin: 0 20px  
 
 
 

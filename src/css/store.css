@@ -1,0 +1,434 @@
+/* Choose tier page */
+h1#titlePlans {padding: 7px 0 20px 0; text-align: center; font-size: 28px; line-height: 1.3em;}
+.cntrBut {text-align: center;}
+
+.phone {float: right; font-size: 16px; line-height: 1.3em; color: #fff; margin-top: 11px;}
+.phone .brite {color: #ffd400}
+
+#plansCmpr {margin: 0 0 20px 0; padding: 0; border-width: 1px 0;}
+.columnTag {display: block; width: 220px; margin: 0 0 -3px 266px; padding: 10px 0; text-align: center; background-color: #005996; font-size: 0; line-height: 0;}
+.cmprCol {float: left; margin: 3px 0 0 0; border: 1px solid #A3A3A3;}
+#cmprCol1 {width: 265px;}
+#cmprCol2 {width: 218px; border-left: 0; border-right: 0;}
+#cmprCol3 {width: 218px; border-right: 0;}
+#cmprCol4 {width: 218px;}
+#plansNote {margin-top: 20px; font-size: 15px; line-height: 1.3em;}
+
+.planTbl {width: 100%; background-color: #fff;}
+.planTbl tr.hedRow th {background-color: #EFF5F9; color: #0082E9; font-weight: bold; border-top: 1px solid #A3A3A3; text-transform: uppercase;}
+.planTbl tr.odd {background-color: #F4F4F4;}
+.planTbl thead th {height: 109px; padding: 13px 15px 0px 15px; }
+.planTbl thead th.tall {height: 169px; }
+.planTbl tbody th,.planTbl td {height: 28px; padding: 0 0 0 8px; vertical-align: middle; font-size: 14px; line-height: 1.3em;}
+.planTbl td {text-align: center; color: #0082E9; font-size: 15px; line-height: 1.3em;}
+
+.planTbl img.hedPlan {margin-bottom: 2px;}
+.planTbl .mainHed {display: block; margin: -2px 0 0 0; font-size: 16px; line-height: 1.4em; font-weight: bold;}
+.planTbl .subHed {display: block; font-size: 16px; line-height: 1.4em;}
+.planTbl .main {display: block; margin-bottom: 10px; font-size: 14px; line-height: 1.4em;}
+.planTbl .main .lrg {font-size: 22px; line-height: 1.4em;}
+.planTbl span.info {float: right; width: 18px; height: 18px; margin: 1px 8px 0 0; background-image: url(../../store/images/iconHelp.png);}
+.planTbl th.info:hover > div {display:block;}
+.planTbl .gry {color: #8C8C8C;}
+.planTbl .chk {display: block; height:20px; background-image: url(../../store/images/iconDot.png); background-repeat: no-repeat; background-position: center center;}
+.planTbl .x {display: block; height:20px; background-image: url(../../store/images/iconX.png); background-repeat: no-repeat; background-position: center center;}
+.planTbl .currentPlan {display:block; margin-top: 12px; font-size:19px; color: #0082E9;}
+
+#cmprCol2 table.planTbl th, #cmprCol3 table.planTbl th, #cmprCol4 table.planTbl th {text-align:center; width: 1000px;}
+
+.contactLine {padding: 23px 0 22px 0; text-align: center; font-size: 18px; line-height: 1.3em; font-weight: bold;}
+
+.tipPlanInfo {position: absolute; margin: -40px 0 0 251px !important;}
+.tipPlanInfo .tooltip {padding:12px 8px 12px 11px; width: 251px; font-weight: normal; font-size: 14px;}
+.tipPlanInfo .tooltipWrap .point {margin: 25px 0 0 0;}
+
+.footNotePlans {margin: 17px 0 -5px 0; font-size: 14px; line-height: 1.3em;}
+
+
+
+/* Lead form page */
+h1#pgName {margin-top: 0;}
+p.introLead {margin: -3px 0 0 0; font-size: 15px; line-height: 1.3em; font-weight: bold;}
+p.successLead {margin: -3px 0 0 0; font-size: 15px; line-height: 1.3em;}
+.leadForm {float: left; width: 380px; padding: 30px 30px 0 0;}
+.leadForm .formRow {padding: 0 0 10px 0;}
+.leadForm label.lbl {float: left; width: 122px; padding: 4px 0 0 0; font-size: 14px; line-height:1.3em; font-weight:bold;}
+
+.leadForm input[type='text'] {width: 242px; padding: 5px 5px 4px 5px; font-size: 14px;}
+.leadForm textarea.msg {height: 90px; width:252px;}
+.leadForm .submit {float: right; display: inline; margin: -5px 4px 0 0;}
+.leadForm .reqFld {font-size: 14px !important; line-height:1.3em;}
+
+#salesPoints {float: left; width: 330px; margin: 30px 0 0 0; padding: 13px 15px 14px 15px; background-color: #fff6d5; border: 1px solid #ccc;}
+#salesPoints p {margin: 0 0 .5em 0; font-size: 14px; line-height: 1.4em;}
+#salesPoints ul {list-style-type: disc; list-style-position: inside;}
+#salesPoints ul li {margin: 0 0 .5em 0; font-size: 14px; line-height: 1.3em;}
+
+
+
+/* Partner landing page */
+.inner.cobrand {padding-top: 10px;}
+.cobrand .logoCobrandPro {margin: 31px 0 0 0;}
+.cobrand .cobrandTop {float: right; margin-top: 30px;}
+.cobrand .text {padding-bottom: 30px; display: inline-block; vertical-align: middle;}
+.cobrand .cobrandFP {margin-top: 10px; color: #666;}
+
+/* TD ameritrade landing page*/
+.cobrandTop.tdameritrade {margin-top: 8px;}
+.cobrandTop.tdameritrade .text {padding: 0 3px 27px 0;}
+
+/* Scottrade landing page*/
+.cobrandTop.scottradeadvisorservices {margin-top: 17px;}
+.cobrandTop.scottradeadvisorservices .text {padding: 0 3px 49px 0;}
+
+/* SumZero landing page*/
+.cobrandTop.sumzero {margin-top: 27px;}
+.cobrandTop.sumzero .text {padding: 0 4px 24px 0;}
+
+/* mintlp landing page*/
+.cobrandTop.mintlp, .cobrandTop.tradepmr {margin-top: 0;}
+.cobrandTop.mintlp .text {padding: 0 0 9px 0;}
+
+.cobrandTop.tradepmr .text {padding: 0 0 29px 0;}
+
+/* SumZero landing page*/
+.cobrandTop.schwab {margin-top: 7px;}
+.cobrandTop.schwab .text {padding: 0 4px 48px 0;}
+
+/* Questrade */
+.cobrandTop.questrade {margin-top: 7px;}
+.cobrandTop.questrade .text {padding: 0 4px 63px 0;}
+
+/* Equity Advisor Solutions landing page*/
+.cobrandTop.eas .logoCobrand {margin-top: -12px;}
+.cobrandTop.eas .text {display: none}
+
+.cobrand h1#hedCobrand {padding: 22px 0 20px 0; font-size: 28px; line-height: 1.3em; font-weight: bold;}
+h1#hedCobrand.sumzero {font-size: 20px; padding-top: 27px;}
+.cobrand #colText {float: right; width: 445px;}
+.cobrand h2#hedColTxt {margin: 0 0 14px 0; font-size: 20px; line-height: 1.3em; font-weight: bold;}
+.cobrand h2#hedColTxt.hedColTxtSm {font-size: 18px;}
+.cobrand h2#hedColTxt.medTxtLight {font-size: 18px; font-weight: normal;}
+.cobrand .paraCobrand {margin: 0 0 .8em 0; font-size: 16px; line-height: 1.5em;}
+.cobrand .paraTestim {font-size: 14px; line-height: 1.6em; margin-top: .8em; color: #007ED3;}
+.cobrand div.testimony.sumzero .paraTestim {color: black;}
+
+
+
+/* Payment page */
+#mainContent .inner.blue {max-width: none; padding: none; background-image: url(../../store/images/bgGradPymtPgTop.png); background-repeat: repeat-x; background-position: 0 0;}
+#colLeft {float: left; display: inline; width: 565px; margin: 0 20px 0 0;}
+#colRight {float: left; display: inline; width: 340px; padding: 0; margin: 0;}
+
+div.login {float: right; text-align: right; font-size: 16px; line-height: 1.4em;}
+
+.salesIntro {margin-bottom: 1em; font-size: 16px; line-height: 1.4em;}
+
+/* Payment page: left column */
+#pgTopPymt {margin: 0 0 10px 0; border-bottom: 1px solid #D6D6D6;}
+#pgTopPymt.trial {padding-top: 9px;}
+#pgTopPymt #colLeft {width: 430px; padding: 15px 30px 25px 30px; margin:0 35px 31px 0; background-color: #fff; border: 1px solid #ADADAD;
+-moz-box-shadow: 6px 6px 5px #aaa; -webkit-box-shadow: 6px 6px 5px #aaa; box-shadow: 6px 6px 5px #aaa;}
+
+h1.pgHed {margin: 0 0 10px 0;font-size: 22px; line-height: 1.3em; font-weight: bold;}
+h1.pgHedLrg {margin: -3px 0 1px 0;font-size: 24px; line-height: 1.3em; font-weight: bold;}
+h2.pgSubHed {margin: 0 0 10px 0;font-size: 20px; line-height: 1.3em;}
+.continueOn {display: block; padding: 0 0 12px 0; margin: -6px 0 1px 0;}
+
+.pymtInfo {margin: 0; padding: 10px 0 0 0;}
+.pgHed.bottom {margin-top:20px; padding:5px 0; border-top: 1px solid #ccc;}
+
+h2.formHead {margin: 0px 0 4px 0; font-size: 24px; line-height: 1.3em; font-weight: bold; }
+h1.paymentHead {margin: 0 0 11px 0; text-align: center; font-size: 22px; line-height: 1.3em; font-weight: bold; }
+h2.featuresHead {margin-bottom: 21px; text-align: center; font-size: 20px; line-height: 1.3em; font-weight: bold; }
+h2.featuresHead.upgrade { text-align:left;}
+p.formSubHead {margin: 0 0 1.3em 0; font-size: 14px; line-height: 1.3em;}
+
+h2.stepHed {padding: 0 0 2px 0; font-size: 16px; line-height: 1.3em; font-weight: bold;}
+h3.stepSubHed {padding: 0 0 18px 0; font-size: 16px; line-height: 1.3em;}
+h2.stepHedWelcome {padding: 0 0 5px 0;}
+h2.stepHed .stepNum {float: left; width: 25px; height: 26px; margin: -4px 10px 0 0; padding: 4px 0 0 0; text-align: center; color: #fff; font-size: 17px; line-height: 100%;
+background-image: url(../../store/images/bgStepNum.png); background-repeat: no-repeat; background-position: 0 0;}
+h2.stepHed a.stepLink {font-size: 14px; line-height: 1.3em; font-weight: normal;}
+.subWelcome {padding: 0 0 26px 0;}
+
+.formRowPro {clear: both; padding: 0 0 9px 0;}
+.formRowPro span.terms{font-size: 16px}
+.formRowPro span.terms a{text-decoration: underline;}
+.formRowPro label {float: left; display: inline; padding: 5px 0 0 0; width: 130px; font-size: 14px; line-height: 1.3em;}
+.formRowPro .inputs {float: left; display: inline; width: 285px;}
+.formRowPro input.txt {width: 245px; padding: 5px 0 5px 5px; font-size: 14px;}
+.formRowPro span.info {float: right; width: 20px; height: 20px; margin: 1px 8px 0 0; background-image: url(../../store/images/iconInfo.png);}
+.formRowPro label.info:hover > div {display:block;}
+.formRowPro label.info:hover > span.info {background-image: url(../../store/images/iconInfoHover.png);}
+
+.tipCVV {margin: -42px 0 0 130px !important;}
+.tipCVV .tooltip {padding:12px 8px 12px 11px; width: 300px; font-weight: normal; font-size: 14px;}
+.tipCVV .tooltipWrap .point {margin: 25px 0 0 0;}
+
+form.pymtInfo fieldset.radios {width: 380px; margin-bottom: 5px;}
+.formRowRad {padding: 7px 10px; margin-bottom: 12px; background-color: #F4F4F4;}
+.formRowRad.brite {background-color: #fff6d5}
+.formRowRad .radioWrap {float: left; margin: 8px 10px 0 0;}
+.formRowRad .textWrap {float: left; font-size: 14px; line-height: 1.5em;}
+.formRowRad .inputs {float: left; margin-right: 5px; font-size: 15px;}
+.formRowRad .price {float: left;  font-size: 15px; text-align: left;}
+.formRowRad .deal {margin: 2px 0 0 5px; color: #00A200;}
+
+#country {width:251px;}
+.discount.formRowRad .inputs {float: left; width: 90px; font-size: 15px; font-weight: bold;}
+.discount.formRowRad .price {float: left; width: 190px; font-size: 15px; text-align: right;}
+.discount.formRowRad .deal {float: left; margin: 2px 0 0 10px; color: #f00;}
+
+form.pymtInfo fieldset {padding: 0 0 15px 0;}
+form.pymtInfo fieldset.cardPaymt {padding-top: 15px;}
+form.pymtInfo.upgrade {padding-top:0px;}
+#updateBillingPlan a.greenButAuto, #proceedPaymentForm a.greenButAuto, #upgradeForm a.greenButAuto, #activateForm a.greenButAuto{float:left;}
+.sectFtnote {clear: left; padding: 12px 0 0 0; font-size: 14px; line-height: 1.4em;}
+.formRow input.ccnum {width: 214px;}
+.expMo,.expYr {width: 124px;}
+.formRow input.secCode {width: 80px;}
+.formRow input.txt:focus {background-color: #FFF3D4;}
+.formRow select.country {width: 251px;}
+
+.formRow.country label {padding-top:1px;}
+.formRow.expirationDate label {padding-top:1px;}
+
+img.iconsCC {margin: -3px 0 0 66px; vertical-align: middle;}
+img.iconLock {margin: 0 0 0 5px;vertical-align: middle;}
+
+#processingImage {padding:9px 0 0 30px;}
+
+/* Payment page: right column */
+#colRight ul.boxBullets {list-style-type: disc; list-style-position: inside; margin: 0 0 15px 0; padding: 12px 12px 10px 12px; background-color: #FCF6D2; border: 1px solid #B3B3B3;}
+#colRight ul.boxBullets li {padding-bottom: 4px; font-size: 14px; line-height: 1.3em; font-weight: bold;}
+#colRight .box {border-top: 1px solid #D3D3D3;}
+#colRight .sectHed {margin: 0 0 0 0;}
+#colRight p.para {font-size: 14px; line-height: 1.3em; margin: 0 0 1em 0;}
+img.logoPress {margin: 10px 0 5px 0;}
+img.cover {float: left; margin: 0 10px 18px 0;}
+img.logosPress {margin: 5px 0 15px 0;}
+img.logosGeoTrust {margin: -5px 0 15px 0;}
+
+#pgTopPymt #colRight {width: 398px;margin: 10px 0 0 0;}
+#colRight .rtRailSect {padding: 20px 0; border-top: 1px solid #A3BED1;}
+#colRight .promoHed {margin-bottom: 1em; font-size: 18px; line-height: 1.3em; font-weight: bold;}
+#colRight .rtRailSect.first {margin-top:-10px; border-top:none; padding-top:0;}
+#colRight p.promoPara {margin: 0 0 1.2em 0; font-size: 16px; line-height: 1.6em;}
+#colRight .promoHedPaymt {padding: .6em 0 .6em 0; font-size: 18px; line-height: 1.3em; font-weight: bold;}
+#colRight p.promoParaPaymt {margin: 0 0 1em 0; font-size: 14px; line-height: 1.5em;}
+#colRight img.logoPress {margin: 14px 0 0 0;}
+#colRight .promoHed.fullFeats {padding: 0 0 45px 0; background-image:url(../../store/images/arrowDnFeats.png); background-repeat: no-repeat; background-position: center bottom;}
+
+/* Payment page: bottom */
+#bottomContent {border-top: 1px solid #ccc;}
+#featsWrap {padding: 10px 0 0 0;}
+#featsWrap .feat {float: left; display: inline; width: 153px; height: 80px; border-left: 1px solid #ccc; text-align: center;}
+#featsWrap .featLast {border-right: 1px solid #ccc;}
+#featsWrap .head {display: block; padding-bottom: 15px; font-size: 15px; line-height: 1.3em; font-weight: bold;}
+
+/* Trial form */
+.loggedIn {margin: 2px 0 16px 0; font-size: 16px; line-height: 1.4em;}
+.trialForm .trialFields {margin-bottom: 8px;}
+.trialForm .formRowPro {min-height: 34px;}
+.trialForm .formRowPro label {width: 165px; font-size: 16px; line-height: 1.4em; font-weight: bold;}
+.trialForm .formRowPro .inputs {width: 265px;}
+.trialForm .formRowPro input.txt {font-size: 16px;}
+.trialForm .formRowPro select.txt {width: 250px; font-size: 16px;}
+
+.butSideNote {display: inline-block; padding-left: 5px;}
+.butSideNote.reg {font-size:18px; line-height:1.4em;}
+
+/* Payment page: FAQ */
+.QnArow {margin: 15px 0; padding: 0 12px; background-color: #F1F1F1;}
+.QnA {float: left; width: 418px; padding-right: 25px; margin-bottom:15px;}
+.QnA div.title {font-size:14px; font-weight:bold; line-height:1.3em; margin-top:15px;}
+.quoteRow {padding: 4px 12px 18px 12px; }
+.quote {float: left; width: 418px; padding-right: 25px; font-size: 14px;}
+.quote .qut {font-weight: bold; font-style: italic;}
+.quote .src {display: block; font-weight: bold; color: #979797;}
+
+/* Payment page modal login */
+#lbLogin {position: fixed; top: 200px; width: 390px; left: 50%; margin-left:-185px; padding: 15px; background-color: #fff; text-align: left; z-index:1000;}
+h3.lbHed {margin: 0 0 1em 0; font-size: 15px; font-weight: bold;}
+.lbLoginForm input.txt {width: 240px;}
+.lbLoginForm label.lab {width: 140px;}
+.lbLoginForm input.submit {float: right; margin: 5px 0 0 0;}
+.lbLoginForm a.lbCancelLink {float: right; margin: 9px 5px 0 10px;}
+#overlay {position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: #666; z-index:200; opacity:0.7; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70);}
+
+/* Payment page inline errors */
+.inlineError {font-weight:bold; color:#FF0000; padding-top:5px;}
+
+ul.errList {padding: 5px 12px; margin: 0 0 12px 0; border: 1px solid #f00;}
+ul.errList li {color: #f00; font-size: 14px; line-height: 1.3em;}
+p.formErr {clear: left; padding: 6px 0 0 130px; color: #f00; font-size: 14px; line-height: 1.3em;}
+
+
+
+/* Switch tiers page */
+form.updateBillingPlan fieldset {padding: 2px 0 8px 0;}
+.updateBillingPlan p.confirm {font-size:14px; padding-bottom:20px;}
+.updateBillingPlan li {font-size:14px; margin: 0 0 10px 0;}
+.updateBillingPlan a.butUpgdTier {width:255px;}
+form.updateBillingPlan .cancelAgrmt {width:300px;}
+
+
+
+/* Upgrade page */
+.upgradeHead {font-size:20px; font-weight:bold; margin-bottom:15px; }
+#agrmtWrap {margin: 15px 0 25px 0;}
+.chkUpgdAgrmt {float: left; }
+.upgdAgrmt {float: left; margin: 0 0 0 6px; font-size: 15px; line-height: 1.3em;}
+.cancelAgrmt {float: left; display: inline; width: 460px; height: 27px; padding: 12px 0 0 12px; margin: 0 0 0 12px; background-color:#FFF6D5; border: 1px solid #ccc; font-size: 14px; line-height: 1.3em; }
+.error.upgrade {margin-top:-10px;}
+div.upgrade ul.error_items {margin-top:10px;}
+
+#featureBottomContent {padding-top: 10px; border-top: 1px solid #ccc;}
+#featureList {width: 398px;margin: 0 0 0 0;}
+#featureList .promoHedPaymt {padding: .6em 0 .6em 0; font-size: 18px; line-height: 1.3em; font-weight: bold;}
+#featureList ul.promoList {float: left; margin: 0 0 10px 0;}
+#featureList ul.promoList.colL {width: 198px;}
+#featureList ul.promoList.colR {width: 220px; margin-right: -20px;}
+#featureList ul.promoList li {margin: 0 0 0em 0; font-size: 14px; line-height: 1.6em;}
+
+/* Upgrade and switch tiers form  */
+#upgradeForm p.disclaimer {float: left; display: inline;  border: 1px solid #ccc; padding: 13px 10px; background-color: #FCF6DA; font-size: 14px; line-height: 1.3em; font-weight: bold; vertical-align: middle;}
+#upgradeForm label.agree {display:block; line-height:1.3em; font-size:14px;  margin:5px 0 18px 0; }
+#upgradeForm label.agree li {margin-bottom: 10px; font-size:14px;}
+#upgradeForm .agree span {display:block; padding-left:5px; }
+#upgradeForm .agree span.deal {color: #00A200; display: inline;}
+
+
+
+/* Activate */
+.activateSubscription div.submitRow { margin: 20px 0; float:left;}
+.activateSubscription fieldset#unlockSub {font-size:14px;}
+.activateSubscription span.highlight {font-weight:bold;}
+.activateSubscription label {padding-left:22px;}
+.activateSubscription h2.featuresHead {text-align:left;}
+.activateSubscription .error li {font-size:14px;}
+
+
+
+/* Cancel */
+input.submit {padding:4px 7px; font-size:14px; font-weight:bold;}
+div.cancelSection {padding: 5px 0; margin-bottom:5px; border-top: 1px solid #ccc;}
+div.cancelFeatures {float:left; margin: 15px 0 15px 0;}
+a.linkNevermind {display:block; padding:17px 0 0 10px; float:left;}
+a.proceedCancel {float: left; display: inline; margin: 10px 0 0 0;}
+
+
+/* Cancel Confirm */
+h1#pgName {margin-top: 0px;}
+a.greenBut.switch {margin: 16px 0 20px 0;}
+.introCancel {font-size: 15px; line-height: 1.3em; font-weight: bold;}
+#feedbackBox {margin: 22px 0 0 0; padding: 6px 0 0 0; border-top: 1px solid #D3D3D3;}
+h3.hedFeedback {margin: 0 0 8px 0; font-size: 15px; line-height: 1.3em; font-weight: bold;}
+p.introFeedbackForm {margin: 0 0 15px 0; font-size: 15px; line-height: 1.3em;}
+textarea.feedBackMsg {width: 370px; height: 75px; padding: 5px;}
+.listCancelReason {width: 450px; margin: 0 0 4px 0; border-top: 1px solid #D3D3D3;}
+.listCancelReason li {padding: 5px 0px 5px 23px; border-bottom: 1px solid #D3D3D3; font-size: 14px;}
+input.sbmtFeedback {padding: 5px 10px; font-size: 14px; line-height: 1.3em; font-weight: bold;}
+
+
+
+/* Previous free trial page */
+.freeTrialOver p {margin-bottom: 12px; font-size:14px; line-height: 1.4em;}
+.freeTrialOver a#noThanks { float:left; margin-top:14px; font-size:14px; margin-left:20px; color:#848484;}
+
+
+
+/* Professional tour page */
+h1#pgName.large {font-size:24px; margin-top: -5px;}
+h1#pgName.tour {font-size: 24px, margin-top: -5px;}
+
+#colTourRail {float: left; width: 195px; margin: 0 25px 0 0;}
+#colTourMain {float: left; width: 705px;}
+
+.paraIndexSect {margin: 0 0 11px 0; font-size: 14px; line-height:1.4em;}
+.featHed {margin: 0 0 1px 0; color: #0082E9; font-size: 14px; line-height:1.3em; font-weight: bold; text-transform: uppercase;}
+.featPara {margin: 0 0 10px 0; font-size: 14px; line-height:1.3em;}
+p.paraIntro {margin-bottom: 0px}
+p.paraIntro.overview {margin-bottom: .8em;}
+.sampleScreen {margin-top: 19px; font-size: 0; line-height: 0;}
+.grphc {margin-bottom: 4px;}
+.pgHed {margin-bottom: 9px;}
+
+div.featSect {margin-bottom: 19px;}
+div.featSect .featHed {margin-bottom: 6px; font-size: 16px;}
+
+#footBox {padding: 7px 0 0 0;}
+#footBox .questLine {float: left; padding: 10px 0 0 5px; font-size: 16px; line-height: 1.3em;}
+
+div.blueBox {margin: 12px 0 2px 0; padding:15px 20px; background-color: #E9F8FF; font-size: 14px;}
+div.blueBox p, div.blueBox a {font-size: 14px;}
+div.blueBox img {padding: 20px 13px 0 0; margin-bottom: -1px;}
+
+/* left col */
+#navTour {margin: 17px 0 17px 0; border-top: 1px solid #C9C9C9;}
+#navTour li.sectHed {padding: 5px 0 3px 0; color: #0082e9; text-transform: uppercase; border-bottom: 1px solid #C9C9C9; font-size: 13px; line-height: 1.3em; font-weight: bold;}
+#navTour a {display: block; padding: 4px 0 4px 0; border-bottom: 1px solid #C9C9C9; color: #000; font-size: 13px; line-height: 1.3em;}
+#navTour .on a {color: #FF5500; background-position: 0 10px;}
+
+#txtProPlat {margin: 0 0 10px 0;}
+#colTourRail a.butTrial {margin: 0 0 1px 0;}
+#colTourRail a.butTrial .type {width: 171px; text-align: center;}
+#questsLine {display: block; padding: 2px 0 0 0; font-size: 13px; line-height: 1.3em;}
+
+.railSect {padding: 13px 5px; border-top: 1px solid #C9C9C9; text-align: center; font-size: 14px; line-height: 1.4em;}
+
+/* right col */
+.heroGrphc {margin: 0 0 8px 0;}
+p.paraIntroPlat {margin-bottom: 13px; font-size: 16px; line-height: 1.4em;}
+.dwnldLine {display: block; padding: 0 0 0 22px; margin-bottom: 8px; font-size: 14px; line-height: 1.4em;
+background-image: url(../../store/images/platinumTour/iconPdf.png); background-repeat: no-repeat; background-position: 0 0;}
+
+.dividerBrdr {margin: 0 0 7px 0; height: 0; font-size: 0; line-height: 0; border-top: 1px solid #808080;}
+
+
+/* Upsell pages */
+h1#pgName.upsell {margin: 6px 0 17px 0;}
+.boxIntroUpsell {padding: 9px 0; margin-bottom: 20px; border: 1px solid #707070; border-width: 1px 0;}
+p.paraIntroUpsell {font-size: 16px; line-height: 1.5em;}
+h2.subHedUpsell {margin-bottom: .5em; font-size: 18px; line-height: 1.5em; font-weight: bold;}
+p.paraUpsell,.listUpsell li {margin-bottom: .7em; font-size: 14px; line-height: 1.4em;}
+ul.listUpsell {list-style-type: disc; margin-left: 43px;}
+img.scrn {margin: 6px 0 12px 0; border: 1px solid #676767;}
+.boxFootNotes {padding: 9px 0 14px 0; margin: 22px 0 0 0; border-top: 1px solid #707070;}
+.boxFootNotes p {margin-bottom: .7em; font-size: 14px; line-height: 1.4em;}
+
+.membSignin {padding: 13px 0 17px 0; text-align: right; font-size: 14px; line-height: 1.4em;}
+h2.hedRailUpsell {padding: 0 0 13px 0; font-size: 16px; line-height: 1.5em;}
+
+
+
+/* New onboarding process */
+#wrapWallIntro {margin-bottom: 45px;}
+p.paraWallIntro {margin-bottom: .7em; font-size: 16px; line-height: 1.4em;}
+p.paraWallIntro.greeting {margin-bottom: .4em; font-size: 22px; line-height: 1.4em; font-weight: bold;}
+
+.salesIntroLrg {margin-bottom: .6em; font-size: 24px; line-height: 1.4em;}
+
+div#onboardingPage p,label {font-size: 14px;}
+div#onboardingPage p.salesIntroLrg {font-size: 24px;}
+ol#onboardSteps {list-style-type: decimal; list-style-position: inside; margin: 20px 0 0 0;}
+ol#onboardSteps>li {margin: 0 0 20px 0; font-size: 16px; line-height: 1.5em; font-weight: bold;}
+ol#onboardSteps .light {font-weight: normal;}
+ol#onboardSteps p.companyListLabel {margin-top:10px;}
+ol#onboardSteps p.companyListItem {line-height:1.5em;}
+
+.onboardForm {padding-bottom: 30px;}
+.onboardForm .symbols {width: 557px; padding: 4px 6px; margin: 3px 0 0 0;}
+.onboardForm .scrollOpts {width: 557px; height: 200px; overflow: auto; padding: 5px; border: 1px solid #b7b7b7;}
+.onboardForm .listOpts>li {padding: 0 0 5px 0; font-weight: normal;}
+.onboardForm .listOpts .symb {display: inline-block; width: 75px;}
+.onboardForm .smlSubmit {margin: 3px 0 0 0;}
+.onboardForm .finalSubmit {margin: 10px 0 0 0;}
+.onboardForm input.submit  {position: absolute; left: -9999px; width: 1px; height: 1px;}
+.onboardForm .searchAutoComp {margin: 27px 0 0 0;}
+
+.optionOnboard {padding: 2px 0 10px 0; font-size: 14px; line-height: 1.4em;}
+.optionOnboard strong.lrg {font-size: 16px; line-height: 1.4em;}
+.optionOnboard .optChk {float: left; margin-top: 4px;}
+.optionOnboard .optLbl {float: left; width: 500px; margin-left: 10px;}

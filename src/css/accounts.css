@@ -1,0 +1,102 @@
+/* Acct Settings structure */
+#col1of3 {float:left; width: 33%; border-right: 1px solid #ccc;}
+#col2of3 {float:left; width: 33%;}
+#col3of3 {float:left; width: 33%; border-left: 1px solid #ccc;}
+
+#colPadLR {padding: 0 10px; margin: 0 20px 0 20px;}
+#editColPadLR {padding: 0 10px; margin: 0 20px 0 10px;}
+#editColPadL {padding-left: 10px; margin-left: 10px;}
+#colPadR {padding-right: 10px; margin-right: 20px;}
+#colPadL {padding-left: 10px; margin-left: 20px;}
+
+/* Registration out */
+p.paraIntro {margin: 0 0 .8em 0; font-size: 16px; line-height: 1.4em;}
+p.chgEmail {margin: 0 0 1.1em 0; font-size: 16px; line-height: 1.4em;}
+p.padTop {margin-top: .8em;}
+#colFormLeft {float: left; display: inline; width: 550px; margin: 0 0 0 0;}
+
+h1#pgHedRegister {margin: -4px 0 16px 0; padding: 0; font-size: 20px; line-height: 1.3em; font-weight: bold;}
+#mainRegFreeSubmitButton {float: left;}
+#signInLine {float: left; margin: 10px 0 0 15px; font-size: 14px; line-height: 1.3em;}
+
+/* Reg form */
+.regFree label.fieldLabel {float: left; width: 140px; padding: 9px 0 0 0; font-size: 14px; line-height: 1.3em; font-weight: bold;}
+.regFree input.txt {float: left; width: 250px; padding: 4px 0 4px 3px; margin: 3px 0 8px 0; font-size: 14px;}
+.regFree input.txt:focus {background-color: #FFFBEB;}
+.regFree input.txt.pass {height: 22px;}
+.regFree .req {float: left; margin: 10px 0 0 10px; color: #808080; font-size: 14px; line-height: 1.3em;}
+
+.emailOptInWrap {padding: 15px 0 20px 0;}
+.emailOptInWrap label {font-size: 14px; line-height: 1.2em;}
+
+.fieldMsg {padding-left: 8px; font-size: 12px; line-height: 1.3em; font-weight: bold;}
+.fieldMsg.fieldMsgPos {color: #008700;}
+
+.dividerBordr {margin-top: 25px; border-top: 1px solid #ccc;}
+
+#colFeatLeft {float: left; width: 288px; margin: 13px 30px 0 0;}
+#colFeatMid {float: left; width: 288px; margin: 13px 30px 0 0;}
+#colFeatRt {float: left; width: 287px; margin: 13px 0 0 0;}
+p.colFeatIntro {margin: 0 0 2px 0; font-size: 15px; line-height: 1.3em;}
+p.colFeatIntro strong.hed {font-size: 18px; line-height: 1.3em;}
+
+/* Previous Free Trial Form */
+#proceedPayment {float:left;}
+
+/* Login, pasword reset, etc */
+form.std.login, form.std.forgot {width: 350px;}
+a.forgot {display: block; font-size: 14px; margin: -5px 0 15px 0;}
+a.member {font-size: 14px;}
+#loginButton {float: left;}
+label.remember {display: block; float: left; font-size: 14px; width: 240px; margin: 8px 0 0 8px;}
+
+/* Basic account forms */
+form.std {padding-bottom: 30px; width: 100%;}
+form.std label.std {display: block; margin-bottom: 14px; font-size: 14px; line-height: 1.3em;}
+form.std input.smlTxt {width: 100%; margin: 2px 0 0 0; padding: 5px 5px; font-size: 14px;}
+form.std textarea.txt {padding: 5px 3px 2px 3px; margin: 2px 0 0 0;}
+form.std.login label.std input {width: 100%; margin: 2px 0 0 0; padding: 5px 5px; font-size: 14px;}
+
+h2.formHed {margin-bottom: 15px; font-size: 16px; font-weight: bold;}
+h2.formHed.bright {color: #0082E9;}
+p.formPara {margin-bottom: 1em; font-size: 14px;}
+
+.sectAcctSet {padding: 6px 0 22px 0; border-top: 1px solid #ccc; font-size: 14px; line-height: 1.3em;}
+.tight {padding-bottom: 6px}
+h3.hedSectAcctSet {margin-bottom: 15px; font-size: 14px; line-height: 1.3em; font-weight: bold;}
+h3.hedAcctFeatSet {margin-bottom: 3px; font-size: 14px; line-height: 1.3em; font-weight: bold;}
+input.sbmtEmailSubs {margin-top: 12px}
+
+div.sectDel, p.delMessage {font-size: 14px; line-height: 1.3em;}
+div.sectDel input{float: left;}
+input.sbmtDeleteReq {margin-top: 20px}
+
+a.updateBillingPlan { margin-bottom:15px; display:block;}
+
+/* Subscription account forms */
+p.memSince {padding: 0 0 20px 0;}
+h3.proInfoHed {padding: 0 0 15px 0; font-weight: bold;}
+
+p.ccOnFile {margin: 0 0 20px 0; font-size: 14px; line-height: 1.3em;}
+p.ccExpError {margin: 0 0 20px 0; color: #f00; font-size: 14px; line-height: 1.3em;}
+
+img.iconsCC {margin: 10px 0 0 0;}
+img.ccIcons {margin: 8px 0 5px 0;}
+img.iconLock {vertical-align: middle; margin: -2px 0 0 3px;}
+.expMo,.expYr {width: 120px;}
+form.std input.secCode {width: 80px;}
+form.std input.zipCode {width: 110px;}
+form.std input.ccNum {width: 240px;}
+form.std select#country { width:247px;}
+form.std select.country { width:285px;}
+form.std.profile label {font-size:14px;}
+
+input.radCancel {position: absolute; margin: 1px 0 0 -18px;}
+/* IE7 specific radio button fix */
+*:first-child+html input.radCancel {position: absolute; margin: -2px 0 0 -22px;}
+textarea.fieldFeedback {width: 448px; height: 95px;}
+.cancelForm p.formPara {margin-right: 100px;}
+a.linkNevermind {padding: 0 0 0 10px; font-size: 14px;}
+
+/* News Source selection */
+#sourceSelector ul.sources li {padding: 3px 0;}
