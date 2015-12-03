@@ -18,76 +18,78 @@
 </head>
 <body class="enterPage">
 <!-- BEGIN  out-->
-<div class="out">
+<div id="wrapAll" class="enterPage">
 	<div id="header" ng-controller="HomepageCtrl">
-	<div class="inner">
+		<div class="inner">
 
-	    <div id="topBar" class="cf">
-	        <div id="logoCol">
-	            <a id="logo" href="/"><img src="//d3ts3pbkmjhdi3.cloudfront.net/images/logo124x17.75c553c04748.png" alt="YCharts" width="124" height="17"/></a>
-	        </div>
+		    <div id="topBar" class="cf">
+		        <div id="logoCol">
+		            <a id="logo" href="/"><img src="//d3ts3pbkmjhdi3.cloudfront.net/images/logo124x17.75c553c04748.png" alt="YCharts" width="124" height="17"/></a>
+		        </div>
 
-	        <div id="navCol" class="right">
-	            <ul id="navButs">
-	                <li class="sales">SALES (866) 965-7552</li>
-	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
-	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
-	                <li class="about"><a href="/about/what_we_do">About</a></li>
-	                
-	                <li class="login"><a href="/login">Login</a></li>
-	                
-	            </ul>
-	        </div> <!-- #navCol -->
+		        <div id="navCol" class="right">
+		            <ul id="navButs">
+		                <li class="sales">SALES (866) 965-7552</li>
+		                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+		                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+		                <li class="about"><a href="/about/what_we_do">About</a></li>
+		                
+		                <li class="login"><a href="/login">Login</a></li>
+		                
+		            </ul>
+		        </div> <!-- #navCol -->
 
-	        <a id="butToggleMenu" ng-click="topNavToggle = !topNavToggle"></a>
+		        <a id="butToggleMenu" ng-click="topNavToggle = !topNavToggle"></a>
 
-	        <div id="navColMbl" class="cf" ng-show="topNavToggle">
-	            <ul id="navButsMbl">
-	                <li class="sales">Sales (866) 965-7552</li>
-	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
-	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
-	                <li class="about"><a href="/about/what_we_do">About</a></li>
-	                
-	                <li class="login" rel="nofollow"><a href="/login">Login</a></li>
-	                
+		        <div id="navColMbl" class="cf" ng-show="topNavToggle">
+		            <ul id="navButsMbl">
+		                <li class="sales">Sales (866) 965-7552</li>
+		                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+		                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+		                <li class="about"><a href="/about/what_we_do">About</a></li>
+		                
+		                <li class="login" rel="nofollow"><a href="/login">Login</a></li>
+		                
 
-	            </ul>
-	        </div><!-- #navColMbl -->
-	    </div><!-- #topBar -->
-	</div><!-- .inner -->
+		            </ul>
+		        </div><!-- #navColMbl -->
+		    </div><!-- #topBar -->
+		</div><!-- .inner -->
 	</div><!-- #header -->
-
-	<div class="enter">
-		<div class="enter__in">
-			<div class="title">Welcome!</div>
-			<div class="info">
-				<p>Sign in to your financial web terminal.</p>
-				<p>Not a member? Register with us <a href="#">here.</a></p>
-			</div>
-			<form action="#">
-				<div class="form">
-					<label class="form__row">
-						<p>E-mail Address</p>
-						<input type="text" class="input">
-					</label>
-					<label class="form__row">
-						<p>Password</p>
-						<input type="password" class="input">
-					</label>
-					<div class="form__bottom">
-						<button type="submit" class="btn">Sign In</button>
-						<div class="form__footer">
-							<label class="checkbox">
-								<input type="checkbox">
-								<span>Remember me on this computer.</span>
-							</label>
-							<a href="#" class="forgor">Forgot your password?</a>
+	<div id="mainContent">
+		<div class="enter">
+			<div class="enterIn">
+				<div class="title">Welcome!</div>
+				<div class="info">
+					<p>Sign in to your financial web terminal.</p>
+					<p>Not a member? Register with us <a href="#">here.</a></p>
+				</div>
+				<form action="#">
+					<div class="form">
+						<label class="formRow">
+							<p>E-mail Address</p>
+							<input type="text" class="input">
+						</label>
+						<label class="formRow">
+							<p>Password</p>
+							<input type="password" class="input">
+						</label>
+						<div class="formBottom">
+							<button type="submit" class="btn">Sign In</button>
+							<div class="formFooter">
+								<label class="checkbox">
+									<input type="checkbox">
+									<span>Remember me on this computer.</span>
+								</label>
+								<a href="#" class="forgor">Forgot your password?</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 	</div>
+	
 
 </div>
 <!-- END out-->

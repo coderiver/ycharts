@@ -16,160 +16,161 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/app.js"></script>
 </head>
-<body class="enterPage">
-<!-- BEGIN  out-->
-<div class="out">
+<body>
+<!-- BEGIN  enterPage -->
+<div id="wrapAll" class="enterPage">
 	<div id="header" ng-controller="HomepageCtrl">
-	<div class="inner">
+		<div class="inner">
 
-	    <div id="topBar" class="cf">
-	        <div id="logoCol">
-	            <a id="logo" href="/"><img src="//d3ts3pbkmjhdi3.cloudfront.net/images/logo124x17.75c553c04748.png" alt="YCharts" width="124" height="17"/></a>
-	        </div>
+		    <div id="topBar" class="cf">
+		        <div id="logoCol">
+		            <a id="logo" href="/"><img src="//d3ts3pbkmjhdi3.cloudfront.net/images/logo124x17.75c553c04748.png" alt="YCharts" width="124" height="17"/></a>
+		        </div>
 
-	        <div id="navCol" class="right">
-	            <ul id="navButs">
-	                <li class="sales">SALES (866) 965-7552</li>
-	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
-	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
-	                <li class="about"><a href="/about/what_we_do">About</a></li>
-	                
-	                <li class="login"><a href="/login">Login</a></li>
-	                
-	            </ul>
-	        </div> <!-- #navCol -->
+		        <div id="navCol" class="right">
+		            <ul id="navButs">
+		                <li class="sales">SALES (866) 965-7552</li>
+		                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+		                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+		                <li class="about"><a href="/about/what_we_do">About</a></li>
+		                
+		                <li class="login"><a href="/login">Login</a></li>
+		                
+		            </ul>
+		        </div> <!-- #navCol -->
 
-	        <a id="butToggleMenu" ng-click="topNavToggle = !topNavToggle"></a>
+		        <a id="butToggleMenu" ng-click="topNavToggle = !topNavToggle"></a>
 
-	        <div id="navColMbl" class="cf" ng-show="topNavToggle">
-	            <ul id="navButsMbl">
-	                <li class="sales">Sales (866) 965-7552</li>
-	                <li class="plans"><a href="/store/start_trial">Plans</a></li>
-	                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
-	                <li class="about"><a href="/about/what_we_do">About</a></li>
-	                
-	                <li class="login" rel="nofollow"><a href="/login">Login</a></li>
-	                
+		        <div id="navColMbl" class="cf" ng-show="topNavToggle">
+		            <ul id="navButsMbl">
+		                <li class="sales">Sales (866) 965-7552</li>
+		                <li class="plans"><a href="/store/start_trial">Plans</a></li>
+		                <li class="cases"><a href="/store/professional_tour">Use Cases</a></li>
+		                <li class="about"><a href="/about/what_we_do">About</a></li>
+		                
+		                <li class="login" rel="nofollow"><a href="/login">Login</a></li>
+		                
 
-	            </ul>
-	        </div><!-- #navColMbl -->
-	    </div><!-- #topBar -->
-	</div><!-- .inner -->
+		            </ul>
+		        </div><!-- #navColMbl -->
+		    </div><!-- #topBar -->
+		</div><!-- .inner -->
 	</div><!-- #header -->
-
-	<div class="enter">
-		<div class="enter__in">
-			<div class="title">Give your research a boost.</div>
-			<div class="info">
-				<p>Start your 7-Day Free Trial. No credit card required.</p>
-				<p>Already joined us? Sign in <a href="#">here.</a></p>
-			</div>
-			<form action="#">
-				<div class="form form_reg">
-					<div class="form__row">
-						<div class="form__col">
-							<p>First Name</p>
-							<input type="text" class="input">
-						</div>
-						<div class="form__col">
-							<p>Last Name</p>
-							<input type="text" class="input">
-						</div>
-					</div>
-					<div class="form__row">
-						<p>Job Function</p>
-						<div class="select js-select">
-						    <div class="select__text js-select-text">размер</div>
-						    <ul class="select__list js-select-list">
-						        <li data-val="var0">Consultant</li>
-						        <li data-val="var1">Individual Investor</li>
-						        <li data-val="var2">Investment Advisor</li>
-						        <li data-val="var3">Investment Banker</li>
-								<li data-val="var4">PE / VC Professional</li>
-						        <li data-val="var5">Research Analyst</li>
-						        <li data-val="var6">Student</li>
-						        <li data-val="var7">Other Professional</li>
-						    </ul>
-						    <select>
-						        <option value="var0">Consultant</option>
-						        <option value="var1">Individual Investor</option>
-						        <option value="var2">Investment Advisor</option>
-						        <option value="var3">Investment Banker</option>
-						        <option value="var4">PE / VC Professional</option>
-						        <option value="var5">Research Analyst</option>
-						        <option value="var6">Student</option>
-						        <option value="var7">Other Professional</option>
-						    </select>
-						</div>
-					</div>
-					<label class="form__row">
-						<p>Organization</p>
-						<input type="input" class="input">
-					</label>
-					<label class="form__row">
-						<p>Phone Number</p>
-						<input type="input" class="input">
-					</label>
-					<label class="form__row">
-						<p>E-mail Address</p>
-						<input type="input" class="input">
-					</label>
-					<label class="form__row">
-						<p>Password: <small>minimum of 7 characters, 1 capital and 1 number.</small></p>
-						<input type="password" class="input">
-					</label>
-					<div class="form__bottom">
-						<div class="form__footer">
-							<label class="checkbox">
-								<input type="checkbox">
-								<span>By checking this box you are indicating that you have read and accepted the <a href="#">terms of use.</a></span>
-							</label>
-						</div>
-						<button type="submit" class="btn">Start Researching Smarter</button>
-					</div>
+	<div id="mainContent">
+		<!-- enter block -->
+		<div class="enter">
+			<div class="enterIn">
+				<div class="title">Give your research a boost.</div>
+				<div class="info">
+					<p>Start your 7-Day Free Trial. No credit card required.</p>
+					<p>Already joined us? Sign in <a href="#">here.</a></p>
 				</div>
-			</form>
+				<form action="#">
+					<div class="form form_reg">
+						<div class="formRow">
+							<div class="formCol">
+								<p>First Name</p>
+								<input type="text" class="input">
+							</div>
+							<div class="formCol">
+								<p>Last Name</p>
+								<input type="text" class="input">
+							</div>
+						</div>
+						<div class="formRow">
+							<p>Job Function</p>
+							<div class="select js-select">
+							    <div class="selectText js-select-text">размер</div>
+							    <ul class="selectList js-select-list">
+							        <li data-val="var0">Consultant</li>
+							        <li data-val="var1">Individual Investor</li>
+							        <li data-val="var2">Investment Advisor</li>
+							        <li data-val="var3">Investment Banker</li>
+									<li data-val="var4">PE / VC Professional</li>
+							        <li data-val="var5">Research Analyst</li>
+							        <li data-val="var6">Student</li>
+							        <li data-val="var7">Other Professional</li>
+							    </ul>
+							    <select>
+							        <option value="var0">Consultant</option>
+							        <option value="var1">Individual Investor</option>
+							        <option value="var2">Investment Advisor</option>
+							        <option value="var3">Investment Banker</option>
+							        <option value="var4">PE / VC Professional</option>
+							        <option value="var5">Research Analyst</option>
+							        <option value="var6">Student</option>
+							        <option value="var7">Other Professional</option>
+							    </select>
+							</div>
+						</div>
+						<label class="formRow">
+							<p>Organization</p>
+							<input type="input" class="input">
+						</label>
+						<label class="formRow">
+							<p>Phone Number</p>
+							<input type="input" class="input">
+						</label>
+						<label class="formRow">
+							<p>E-mail Address</p>
+							<input type="input" class="input">
+						</label>
+						<label class="formRow">
+							<p>Password: <small>minimum of 7 characters, 1 capital and 1 number.</small></p>
+							<input type="password" class="input">
+						</label>
+						<div class="formBottom">
+							<div class="formFooter">
+								<label class="checkbox">
+									<input type="checkbox">
+									<span>By checking this box you are indicating that you have read and accepted the <a href="#">terms of use.</a></span>
+								</label>
+							</div>
+							<button type="submit" class="btn">Start Researching Smarter</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerIn">
+				<p>YCharts has been featured on: </p>
+				<ul class="parthners">
+					<li>
+						<a href="#">
+							<img src="img/RiaBiz.png" width="100" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/barrons.jpg" width="130" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/ThinkAdvisor.jpg" width="145" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/forbes.png" width="96" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/imd.jpg" width="140" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/investmentNews.jpeg" width="130" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 	</div>
-
-	<!-- footer -->
-	<footer class="footer">
-		<div class="footer__in">
-			<p>YCharts has been featured on: </p>
-			<ul class="parthners">
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<img src="img/logo1.jpg" width="100" alt="">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</footer>
 
 </div>
 <!-- END out-->
