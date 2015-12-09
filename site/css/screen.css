@@ -2,7 +2,7 @@
 .enterPage .enter { padding-top: 58px; }
 .enterPage .enter *, .enterPage .enter *:before, .enterPage .enter *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 .enterPage .enter .enterIn { max-width: 350px; text-align: center; margin: 0 auto; }
-.enterPage .title { margin-bottom: 20px; font-size: 28px; color: #0082E9; }
+.enterPage .title { margin-bottom: 20px; font-size: 27px; color: #0082E9; white-space: nowrap; }
 .enterPage .info { margin-bottom: 35px; font-size: 15px; color: #666; }
 .enterPage .info a { color: #0316FF; text-decoration: none; }
 .enterPage .info a:hover { text-decoration: underline; }
@@ -19,7 +19,7 @@
 .enterPage .form .formCol { float: left; width: 47.5%; margin-left: 5%; }
 .enterPage .form .formCol:first-child { margin-left: 0; }
 .enterPage .form.form_reg .formFooter { padding-top: 0; padding-bottom: 19px; }
-.enterPage .input { width: 100%; height: 40px; border: 1px solid #b2b2b2; background: #fff; padding: 0 15px; font-size: 13px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.enterPage .input { width: 100%; height: 40px; border: 1px solid #b2b2b2; background: #fff; padding: 0 8px; font-size: 13px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .enterPage .btn { width: 100%; height: 40px; vertical-align: middle; text-align: center; color: #fff; outline: none; border: none; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 15px; background: #0082E9; cursor: pointer; letter-spacing: 0.5px; }
 .enterPage .checkbox { position: relative; font-size: 0; padding-left: 20px; text-align: left; *zoom: 1; display: block; }
 .enterPage .checkbox:after { content: " "; display: table; clear: both; }
